@@ -1,0 +1,163 @@
+.body {
+	margin: auto;
+	width: 1640px;
+	height: auto;
+}
+.header {
+	margin: auto;
+	width: 1440px;
+	height: 126px;
+}
+.header_container {
+	display: grid;
+	grid-template-columns: 21% 33% 46%;
+}
+.header_contacts {
+	display: grid;
+	grid-template-columns: 40% 5% 40%;
+}
+.img_icons_header {
+	width: 20px;
+	height: 20px;
+}
+.header_a {
+	margin: 10px;
+}
+.text_h1 {
+	width: 138;
+	height: 26;
+	top: 146px;
+	left: 100px;
+}
+.text_h3 {
+	width: 456;
+	height: 42;
+	top: 212px;
+	left: 100px;
+}
+.button {
+	width: 288;
+	height: 40;
+
+	border-width: 1px;
+	padding-top: 7px;
+	padding-right: 72px;
+	padding-bottom: 7px;
+	padding-left: 72px;
+	gap: 10px;
+}
+
+.catalog {
+	padding: 20px 0px;
+	background: brown;
+	width: 1245;
+	height: 2074;
+}
+.filter_block {
+	display: inline-block;
+	background: violet;
+}
+.filter {
+	background: navy;
+}
+.product_cards {
+	background: chocolate;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
+	justify-content: stretch;
+}
+
+.filter_product_cards {
+	width: 1100px;
+	height: auto;
+	float: right;
+}
+.product_block {
+	width: 400px;
+	height: 400px;
+}
+.ceo_product {
+	display: grid;
+	grid-template-columns: 720px 720px;
+	justify-content: center;
+}
+.footer {
+	padding: 20px;
+	display: grid;
+	grid-row: 1;
+	width: 1440px;
+	background-color: #0d2436;
+	color: white;
+	grid-template-columns: 20% 20%;
+}
+.footer_end {
+	text-align: center;
+	background-color: #0d2436;
+	border-top: 1px solid black;
+	color: white;
+}
+.footer_ul {
+	width: 930px;
+	height: 277px;
+	gap: 97px;
+	display: grid;
+	grid-template-columns: 20% 20% 20% 20%;
+}
+.footer_logo_img {
+	padding: 20px;
+	margin: 20px;
+}
+.footer_logo {
+	width: 500px;
+}
+.footer_ul_ul {
+	width: 139px;
+	height: 204px;
+	gap: 24px;
+}
+.ul_h3 {
+	font-family: SF Pro Text;
+	font-weight: 600;
+	font-size: 44px;
+
+	padding: 30px 0px;
+}
+.ul {
+	text-align: center;
+	padding: 10px;
+}
+.ul_input {
+	width: 240px;
+	height: 50px;
+	color: solid #b5b8b1;
+}
+.ul_button {
+	color: white;
+	width: 220px;
+	height: 50px;
+	background-color: #78dbe2;
+}
+.ul_forms {
+	padding: 30px 0px;
+	display: grid;
+	grid-template-columns: 18% 18% 18%;
+	justify-content: center;
+}
+.ul.text {
+}
+.viewing_history_carts {
+	display: grid;
+}
+.history_carts {
+	width: 288px;
+	height: 426px;
+	display: grid;
+	grid-row: 1;
+}
+.viewing_history_text {
+	font-family: SF Pro Text;
+	font-weight: 600;
+	font-size: 44px;
+	padding: 20px 0px;
+}
