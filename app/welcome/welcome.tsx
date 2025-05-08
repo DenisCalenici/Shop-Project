@@ -7,30 +7,30 @@ export function Welcome() {
 	const [nav, setNav] = useState(false)
 	return (
 		<div className={s.body}>
-			<div className={s.body_container}>
-				<div className={s.header}>
-					<div className={s.header_container}>
-						<div className={s.header_logo}>
-							<img src="./app/img/Logo (1).svg" />
-						</div>
-						<div className={s.header_ul}>
-							<a href="#" className={s.header_a}>
-								Главная
-							</a>
-							<a href="#" className={s.header_a}>
-								Каталог
-							</a>
-							<a href="#" className={s.header_a}>
-								Оптовая продажа
-							</a>
-							<a href="#" className={s.header_a}>
-								О нас
-							</a>
-						</div>
-						<div className={s.header_contacts}>
-							<a href="#" className={s.header_contacts_a}>
-								+7 (966) 55 88 499
-							</a>
+			<div className={s.header}>
+				<div className={s.header_container}>
+					<div className={s.header_logo}>
+						<img src="./app/img/Logo (1).svg" />
+					</div>
+					<div className={s.header_ul}>
+						<a href="#" className={s.header_a}>
+							Главная
+						</a>
+						<a href="#" className={s.header_a}>
+							Каталог
+						</a>
+						<a href="#" className={s.header_a}>
+							Оптовая продажа
+						</a>
+						<a href="#" className={s.header_a}>
+							О нас
+						</a>
+					</div>
+					<div className={s.header_contacts}>
+						<a href="#" className={s.header_contacts_a}>
+							+7 (966) 55 88 499
+						</a>
+						<div className={s.header_contacts_img}>
 							<img
 								className={s.img_icons_header}
 								src="app/img/Vector.png"
@@ -39,72 +39,76 @@ export function Welcome() {
 								className={s.img_icons_header}
 								src="app/img/Frame.png"></img>
 						</div>
+
 					</div>
+				</div>
 
-					<header className={s.burger_header}>
-						<div className={s.container}>
-							<div className={s.box}>
-								<div
-									className={
-										nav
-											? [s.box_ul, s.active].join(' ')
-											: s.box_ul
-									}
-								><ul className={s.box_ul_ul}>
-										<li className={s.box_li}>
-											<a className={s.box_a} href="#">
-												Главная
-											</a>
-										</li>
-										<li className={s.box_li}>
-											<a className={s.box_a} href="#">
-												Каталог
-											</a>
-										</li>
-										<li className={s.box_li}>
-											<a className={s.box_a} href="#">
-												Оптовая продажа
-											</a>
-										</li>
-										<li className={s.box_li}>
-											<a className={s.box_a} href="#">
-												О нас
-											</a>
-										</li></ul>
+				<header className={s.burger_header}>
+					<div className={s.container}>
+						<div className={s.box}>
+							<div
+								className={
+									nav
+										? [s.box_ul, s.active].join(' ')
+										: s.box_ul
+								}
+							><ul className={s.box_ul_ul}>
+									<li className={s.box_li}>
+										<a className={s.box_a} href="#">
+											Главная
+										</a>
+									</li>
+									<li className={s.box_li}>
+										<a className={s.box_a} href="#">
+											Каталог
+										</a>
+									</li>
+									<li className={s.box_li}>
+										<a className={s.box_a} href="#">
+											Оптовая продажа
+										</a>
+									</li>
+									<li className={s.box_li}>
+										<a className={s.box_a} href="#">
+											О нас
+										</a>
+									</li></ul>
 
 
-									<div className={s.box_namber}>
-										<span> <img
-											className={s.box_namber_img}
-											src="app/img/phone-call 1.png"
-										/> +7 (966) 55 88 499</span>
-										<span> <a href="#">Обратный звонок</a></span>
-									</div>
-								</div>
-								<div
-									onClick={() => setNav(!nav)}
-									className={s.mobile_btn}
-								>
-									{nav ? (
-										<AiOutlineClose size={24} />
-									) : (
-										<AiOutlineMenu size={24} />
-									)}
-								</div>
-								<div className={s.box_logo_img}>
-									<img
-										className={s.box_img}
-										src="app/img/Vector.png"
-									/>
-									<img
-										className={s.box_img}
-										src="app/img/Frame.png"
-									/>
+								<div className={s.box_namber}>
+									<span> <img
+										className={s.box_namber_img}
+										src="app/img/phone-call 1.png"
+									/> +7 (966) 55 88 499</span>
+									<span> <a href="#">Обратный звонок</a></span>
 								</div>
 							</div>
+							<div
+								onClick={() => setNav(!nav)}
+								className={s.mobile_btn}
+							>
+								{nav ? (
+									<AiOutlineClose size={24} />
+								) : (
+									<AiOutlineMenu size={24} />
+								)}
+							</div>
+							<div className={s.box_logo_img}>
+								<img
+									className={s.box_img}
+									src="app/img/Vector.png"
+								/>
+								<img
+									className={s.box_img}
+									src="app/img/Frame.png"
+								/>
+							</div>
 						</div>
-					</header>
-				</div>
+					</div>
+				</header>
+			</div>
+			<div className={s.body_container}>
+
 				<h1 className={s.text_h1}>
 					<a href="#" className={s.text_a_1}>
 						Главная
@@ -163,7 +167,7 @@ export function Welcome() {
 					</div>
 				</div>
 				<div className={s.ceo_product}>
-					<div className={s.product_block}>
+					<div className={s. ceo_product_block}>
 						<h3 className={s.ceo_product_h3}>
 							Eget quis quam metus, scelerisque.
 						</h3>
@@ -313,6 +317,9 @@ export function Welcome() {
 						<button className={s.ul_button}>Отправить</button>
 					</div>
 				</div>
+
+			</div>
+			<div className={s.footer_body}>
 				<div className={s.footer}>
 					<div className={s.footer_logo}>
 						<div className={s.footer_logo_1}>
@@ -407,7 +414,6 @@ export function Welcome() {
 					</p>
 				</div>
 			</div>
-
-		</div >
+		</div>
 	)
 }
