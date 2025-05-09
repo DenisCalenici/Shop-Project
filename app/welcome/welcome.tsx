@@ -31,6 +31,8 @@ export function Welcome() {
 							+7 (966) 55 88 499
 						</a>
 						<div className={s.header_contacts_img}>
+							
+							
 							<img
 								className={s.img_icons_header}
 								src="app/img/Vector.png"
@@ -167,7 +169,7 @@ export function Welcome() {
 					</div>
 				</div>
 				<div className={s.ceo_product}>
-					<div className={s. ceo_product_block}>
+					<div className={s.product_block}>
 						<h3 className={s.ceo_product_h3}>
 							Eget quis quam metus, scelerisque.
 						</h3>
@@ -205,10 +207,10 @@ export function Welcome() {
 						</div>
 					</div>
 					<div className={s.product_block}>
-						<img src="app/img/white-3.png" />
+						<img className={s.product_block} src="app/img/white-3.png" />
 					</div>
 					<div className={s.product_block}>
-						<img src="app/img/white-2.png" />
+						<img className={s.product_block} src="app/img/white-2.png" />
 					</div>
 					<div className={s.product_block}>
 						<h3 className={s.ceo_product_h3}>
@@ -234,7 +236,7 @@ export function Welcome() {
 				<div className={s.ceo_product_mobile}>
 					<div className={s.product_block_mobile}>
 						<div className={s.product_block_mobile}>
-							<img src="app/img/white-3.png" />
+							<img className={s.product_block_mobile} src="app/img/white-3.png" />
 						</div>
 						<h3 className={s.ceo_product_h3_mobile}>
 							Eget quis quam metus, scelerisque.
@@ -274,7 +276,7 @@ export function Welcome() {
 					</div>
 
 					<div className={s.product_block_mobile}>
-						<img src="app/img/white-2.png" />
+						<img className={s.product_block_mobile} src="app/img/white-2.png" />
 					</div>
 					<div className={s.product_block_mobile}>
 						<h3 className={s.ceo_product_h3_mobile}>
@@ -322,13 +324,14 @@ export function Welcome() {
 			<div className={s.footer_body}>
 				<div className={s.footer}>
 					<div className={s.footer_logo}>
-						<div className={s.footer_logo_1}>
+						<div>
 							<img
 								className={s.footer_logo_img}
 								src="app/img/Logo (5).png"
 							/>
+
 						</div>
-						<div className={s.footer_logo_2}>
+						<div >
 							<img
 								className={s.footer_logo_img_2}
 								src="app/img/Frame 4075216.png"
