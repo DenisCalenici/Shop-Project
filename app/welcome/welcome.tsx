@@ -8,7 +8,12 @@ export function Welcome() {
 	return (
 		<div className={s.body}>
 			<div className={s.header}>
-				<div className={s.header_container}>
+				<div className={s.header_advertisement_container}>
+					<div className={s.header_advertisement}>
+						<div className={s.header_advertisement_discount}>Скидка 10% по промокоду “ZAMOK” на все заказы до 10.09</div>
+						<a className={s.header_advertisement_a}> Обратный звонок</a>
+					</div></div>
+				<div className={s.header_container_container}><div className={s.header_container}>
 					<div className={s.header_logo}>
 						<img src="./app/img/Logo (1).svg" />
 					</div>
@@ -31,8 +36,7 @@ export function Welcome() {
 							+7 (966) 55 88 499
 						</a>
 						<div className={s.header_contacts_img}>
-							
-							
+
 							<img
 								className={s.img_icons_header}
 								src="app/img/Vector.png"
@@ -43,7 +47,7 @@ export function Welcome() {
 						</div>
 
 					</div>
-				</div>
+				</div></div>
 
 				<header className={s.burger_header}>
 					<div className={s.container}>
@@ -112,18 +116,20 @@ export function Welcome() {
 			<div className={s.body_container}>
 
 				<h1 className={s.text_h1}>
-					<a href="#" className={s.text_a_1}>
-						Главная
-					</a>
+					<div className={s.text_a}>
+						<a href="#" className={s.text_a_1}>
+							Главная
+						</a>
 
-					<img
-						className={s.text_a_2}
-						src="app/img/Vector12.png"
-					/>
+						<img
+							className={s.text_a_2}
+							src="app/img/Vector12.png"
+						/>
 
-					<a href="#" className={s.text_a_3}>
-						/ Каталог
-					</a>
+						<a href="#" className={s.text_a_3}>
+							/ Каталог
+						</a>
+					</div>
 
 					<p className={s.text_h3}>
 						Накладные электронные замки
@@ -146,26 +152,774 @@ export function Welcome() {
 					</button>
 					<div className={s.filter_block}>
 						<div className={s.filter}></div>
+						<div className={s.filter_product} >
+							<div className={s.filter_product_cards}>
+								<div className={s.product_cards}>
 
-						<div className={s.filter_product_cards}>
-							<div className={s.product_cards}>1</div>
-							<div className={s.product_cards}>2</div>
-							<div className={s.product_cards}>3</div>
-							<div className={s.product_cards}>4</div>
-							<div className={s.product_cards}>5</div>
-							<div className={s.product_cards}>6</div>
+									<div className={s.filter_castle}>
+										<div className={s.filter_castle_buttons}>
+											<div className={s.filter_castle_availability} >
+												<button className={s.filter_castle_button_1}>
+													<img src='app/img/button_none.png' />  </button>
+												<p className={s.filter_castle_availability_p}>Нет в наличии </p>
+											</div>
+
+											<button className={s.filter_castle_button_2}>SALE </button></div>
+										<div className={s.filter_castle_button_body3}>
+
+											<button className={s.filter_castle_button_3}>
+												<img src='app/img/podarok.png' /> Подарок </button>
+										</div>
+
+									</div>
+									<div className={s.price_card}>
+										<div className={s.price_card_reviews}>
+											<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
+											<p className={s.price_card_reviews_p}>(12) отзывов</p></div>
+										<div className={s.price_card_name}>
+											<p className={s.price_card_name_p}>Вариативный замок Golden Soft для отеля</p>
+										</div>
+										<div className={s.price_sum_card}>
+											<p className={s.price_current_price}>7 000₽</p>
+											<p className={s.price_old_price}>8 000₽</p>
+										</div>
+
+
+									</div>
+
+
+
+
+
+
+
+
+
+								</div>
+								<div className={s.product_cards}>
+
+									<div className={s.filter_castle_2}>
+										<div className={s.filter_castle_buttons}>
+											<div className={s.filter_castle_availability} >
+												<button className={s.filter_castle_button_1}>
+													<img src='app/img/button_ok.png' />  </button>
+												<p className={s.filter_castle_availability_p}>В наличии </p>
+											</div>
+
+											<button className={s.filter_castle_button_2}>SALE </button></div>
+										<div className={s.filter_castle_button_body3}>
+
+											<button className={s.filter_castle_button_3}>
+												<img src='app/img/podarok.png' /> Подарок </button>
+										</div>
+
+									</div>
+									<div className={s.price_card}>
+										<div className={s.price_card_reviews}>
+											<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
+											<p className={s.price_card_reviews_p}>(12) отзывов</p></div>
+										<div className={s.price_card_name}>
+											<p className={s.price_card_name_p}>Дверной Замок Golden Soft для<br /> офиса</p>
+										</div>
+										<div className={s.price_sum_card}>
+											<p className={s.price_current_price_2}>33 000₽</p>
+											<p className={s.price_old_price}>39 000₽</p>
+										</div>
+
+
+									</div>
+
+								</div>
+								<div className={s.product_cards}>
+
+									<div className={s.filter_castle_3}>
+										<div className={s.filter_castle_buttons}>
+											<div className={s.filter_castle_availability} >
+												<button className={s.filter_castle_button_1}>
+													<img src='app/img/button_ok.png' />  </button>
+												<p className={s.filter_castle_availability_p}>В наличии </p>
+											</div>
+
+											<button className={s.filter_castle_button_2}>SALE </button></div>
+										<div className={s.filter_castle_button_body3}>
+
+											<button className={s.filter_castle_button_3}>
+												<img src='app/img/podarok.png' /> Подарок </button>
+										</div>
+
+									</div>
+									<div className={s.price_card}>
+										<div className={s.price_card_reviews}>
+											<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
+											<p className={s.price_card_reviews_p}>(12) отзывов</p></div>
+										<div className={s.price_card_name}>
+											<p className={s.price_card_name_p}>Дверной Замок Golden Soft для<br /> офиса</p>
+										</div>
+										<div className={s.price_sum_card}>
+											<p className={s.price_current_price}>9 000₽</p>
+											<p className={s.price_old_price}>12 000₽</p>
+										</div>
+
+
+									</div>
+
+
+
+
+
+
+
+
+
+								</div>
+								<div className={s.product_cards}>
+
+									<div className={s.filter_castle}>
+										<div className={s.filter_castle_buttons}>
+											<div className={s.filter_castle_availability} >
+												<button className={s.filter_castle_button_1}>
+													<img src='app/img/button_none.png' />  </button>
+												<p className={s.filter_castle_availability_p}>Нет в наличии </p>
+											</div>
+
+											<button className={s.filter_castle_button_2}>SALE </button></div>
+										<div className={s.filter_castle_button_body3}>
+
+											<button className={s.filter_castle_button_3}>
+												<img src='app/img/podarok.png' /> Подарок </button>
+										</div>
+
+									</div>
+									<div className={s.price_card}>
+										<div className={s.price_card_reviews}>
+											<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
+											<p className={s.price_card_reviews_p}>(12) отзывов</p></div>
+										<div className={s.price_card_name}>
+											<p className={s.price_card_name_p}>Вариативный замок Golden Soft для отеля</p>
+										</div>
+										<div className={s.price_sum_card}>
+											<p className={s.price_current_price}>7 000₽</p>
+											<p className={s.price_old_price}>8 000₽</p>
+										</div>
+
+
+									</div>
+
+
+
+
+
+
+
+
+
+								</div>
+								<div className={s.product_cards}>
+
+									<div className={s.filter_castle_2}>
+										<div className={s.filter_castle_buttons}>
+											<div className={s.filter_castle_availability} >
+												<button className={s.filter_castle_button_1}>
+													<img src='app/img/button_ok.png' />  </button>
+												<p className={s.filter_castle_availability_p}>В наличии </p>
+											</div>
+
+											<button className={s.filter_castle_button_2}>SALE </button></div>
+										<div className={s.filter_castle_button_body3}>
+
+											<button className={s.filter_castle_button_3}>
+												<img src='app/img/podarok.png' /> Подарок </button>
+										</div>
+
+									</div>
+									<div className={s.price_card}>
+										<div className={s.price_card_reviews}>
+											<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
+											<p className={s.price_card_reviews_p}>(12) отзывов</p></div>
+										<div className={s.price_card_name}>
+											<p className={s.price_card_name_p}>Дверной Замок Golden Soft для<br /> офиса</p>
+										</div>
+										<div className={s.price_sum_card}>
+											<p className={s.price_current_price_2}>33 000₽</p>
+											<p className={s.price_old_price}>39 000₽</p>
+										</div>
+
+
+									</div>
+
+								</div>
+								<div className={s.product_cards}>
+
+									<div className={s.filter_castle_3}>
+										<div className={s.filter_castle_buttons}>
+											<div className={s.filter_castle_availability} >
+												<button className={s.filter_castle_button_1}>
+													<img src='app/img/button_ok.png' />  </button>
+												<p className={s.filter_castle_availability_p}>В наличии </p>
+											</div>
+
+											<button className={s.filter_castle_button_2}>SALE </button></div>
+										<div className={s.filter_castle_button_body3}>
+
+											<button className={s.filter_castle_button_3}>
+												<img src='app/img/podarok.png' /> Подарок </button>
+										</div>
+
+									</div>
+									<div className={s.price_card}>
+										<div className={s.price_card_reviews}>
+											<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
+											<p className={s.price_card_reviews_p}>(12) отзывов</p></div>
+										<div className={s.price_card_name}>
+											<p className={s.price_card_name_p}>Дверной Замок Golden Soft для<br /> офиса</p>
+										</div>
+										<div className={s.price_sum_card}>
+											<p className={s.price_current_price}>9 000₽</p>
+											<p className={s.price_old_price}>12 000₽</p>
+										</div>
+
+
+									</div>
+
+
+
+
+
+
+
+
+
+								</div>
+								<div className={s.product_cards}>
+
+									<div className={s.filter_castle}>
+										<div className={s.filter_castle_buttons}>
+											<div className={s.filter_castle_availability} >
+												<button className={s.filter_castle_button_1}>
+													<img src='app/img/button_none.png' />  </button>
+												<p className={s.filter_castle_availability_p}>Нет в наличии </p>
+											</div>
+
+											<button className={s.filter_castle_button_2}>SALE </button></div>
+										<div className={s.filter_castle_button_body3}>
+
+											<button className={s.filter_castle_button_3}>
+												<img src='app/img/podarok.png' /> Подарок </button>
+										</div>
+
+									</div>
+									<div className={s.price_card}>
+										<div className={s.price_card_reviews}>
+											<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
+											<p className={s.price_card_reviews_p}>(12) отзывов</p></div>
+										<div className={s.price_card_name}>
+											<p className={s.price_card_name_p}>Вариативный замок Golden Soft для отеля</p>
+										</div>
+										<div className={s.price_sum_card}>
+											<p className={s.price_current_price}>7 000₽</p>
+											<p className={s.price_old_price}>8 000₽</p>
+										</div>
+
+
+									</div>
+
+
+
+
+
+
+
+
+
+								</div>
+								<div className={s.product_cards}>
+
+									<div className={s.filter_castle_2}>
+										<div className={s.filter_castle_buttons}>
+											<div className={s.filter_castle_availability} >
+												<button className={s.filter_castle_button_1}>
+													<img src='app/img/button_ok.png' />  </button>
+												<p className={s.filter_castle_availability_p}>В наличии </p>
+											</div>
+
+											<button className={s.filter_castle_button_2}>SALE </button></div>
+										<div className={s.filter_castle_button_body3}>
+
+											<button className={s.filter_castle_button_3}>
+												<img src='app/img/podarok.png' /> Подарок </button>
+										</div>
+
+									</div>
+									<div className={s.price_card}>
+										<div className={s.price_card_reviews}>
+											<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
+											<p className={s.price_card_reviews_p}>(12) отзывов</p></div>
+										<div className={s.price_card_name}>
+											<p className={s.price_card_name_p}>Дверной Замок Golden Soft для<br /> офиса</p>
+										</div>
+										<div className={s.price_sum_card}>
+											<p className={s.price_current_price_2}>33 000₽</p>
+											<p className={s.price_old_price}>39 000₽</p>
+										</div>
+
+
+									</div>
+
+								</div>
+								<div className={s.product_cards}>
+
+									<div className={s.filter_castle_3}>
+										<div className={s.filter_castle_buttons}>
+											<div className={s.filter_castle_availability} >
+												<button className={s.filter_castle_button_1}>
+													<img src='app/img/button_ok.png' />  </button>
+												<p className={s.filter_castle_availability_p}>В наличии </p>
+											</div>
+
+											<button className={s.filter_castle_button_2}>SALE </button></div>
+										<div className={s.filter_castle_button_body3}>
+
+											<button className={s.filter_castle_button_3}>
+												<img src='app/img/podarok.png' /> Подарок </button>
+										</div>
+
+									</div>
+									<div className={s.price_card}>
+										<div className={s.price_card_reviews}>
+											<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
+											<p className={s.price_card_reviews_p}>(12) отзывов</p></div>
+										<div className={s.price_card_name}>
+											<p className={s.price_card_name_p}>Дверной Замок Golden Soft для<br /> офиса</p>
+										</div>
+										<div className={s.price_sum_card}>
+											<p className={s.price_current_price}>9 000₽</p>
+											<p className={s.price_old_price}>12 000₽</p>
+										</div>
+
+
+									</div>
+
+
+
+
+
+
+
+
+
+								</div>
+								<div className={s.product_cards}>
+
+									<div className={s.filter_castle}>
+										<div className={s.filter_castle_buttons}>
+											<div className={s.filter_castle_availability} >
+												<button className={s.filter_castle_button_1}>
+													<img src='app/img/button_none.png' />  </button>
+												<p className={s.filter_castle_availability_p}>Нет в наличии </p>
+											</div>
+
+											<button className={s.filter_castle_button_2}>SALE </button></div>
+										<div className={s.filter_castle_button_body3}>
+
+											<button className={s.filter_castle_button_3}>
+												<img src='app/img/podarok.png' /> Подарок </button>
+										</div>
+
+									</div>
+									<div className={s.price_card}>
+										<div className={s.price_card_reviews}>
+											<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
+											<p className={s.price_card_reviews_p}>(12) отзывов</p></div>
+										<div className={s.price_card_name}>
+											<p className={s.price_card_name_p}>Вариативный замок Golden Soft для отеля</p>
+										</div>
+										<div className={s.price_sum_card}>
+											<p className={s.price_current_price}>7 000₽</p>
+											<p className={s.price_old_price}>8 000₽</p>
+										</div>
+
+
+									</div>
+
+
+
+
+
+
+
+
+
+								</div>
+								<div className={s.product_cards}>
+
+									<div className={s.filter_castle_2}>
+										<div className={s.filter_castle_buttons}>
+											<div className={s.filter_castle_availability} >
+												<button className={s.filter_castle_button_1}>
+													<img src='app/img/button_ok.png' />  </button>
+												<p className={s.filter_castle_availability_p}>В наличии </p>
+											</div>
+
+											<button className={s.filter_castle_button_2}>SALE </button></div>
+										<div className={s.filter_castle_button_body3}>
+
+											<button className={s.filter_castle_button_3}>
+												<img src='app/img/podarok.png' /> Подарок </button>
+										</div>
+
+									</div>
+									<div className={s.price_card}>
+										<div className={s.price_card_reviews}>
+											<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
+											<p className={s.price_card_reviews_p}>(12) отзывов</p></div>
+										<div className={s.price_card_name}>
+											<p className={s.price_card_name_p}>Дверной Замок Golden Soft для<br /> офиса</p>
+										</div>
+										<div className={s.price_sum_card}>
+											<p className={s.price_current_price_2}>33 000₽</p>
+											<p className={s.price_old_price}>39 000₽</p>
+										</div>
+
+
+									</div>
+
+								</div>
+								<div className={s.product_cards}>
+
+									<div className={s.filter_castle_3}>
+										<div className={s.filter_castle_buttons}>
+											<div className={s.filter_castle_availability} >
+												<button className={s.filter_castle_button_1}>
+													<img src='app/img/button_ok.png' />  </button>
+												<p className={s.filter_castle_availability_p}>В наличии </p>
+											</div>
+
+											<button className={s.filter_castle_button_2}>SALE </button></div>
+										<div className={s.filter_castle_button_body3}>
+
+											<button className={s.filter_castle_button_3}>
+												<img src='app/img/podarok.png' /> Подарок </button>
+										</div>
+
+									</div>
+									<div className={s.price_card}>
+										<div className={s.price_card_reviews}>
+											<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
+											<p className={s.price_card_reviews_p}>(12) отзывов</p></div>
+										<div className={s.price_card_name}>
+											<p className={s.price_card_name_p}>Дверной Замок Golden Soft для<br /> офиса</p>
+										</div>
+										<div className={s.price_sum_card}>
+											<p className={s.price_current_price}>9 000₽</p>
+											<p className={s.price_old_price}>12 000₽</p>
+										</div>
+
+
+									</div>
+
+
+
+
+
+
+
+
+
+								</div>
+
+							</div>
+							<div className={s.paginator_filter}>
+								<a href='#'>&lt;</a>
+								<a className={s.paginator_active} href='#'>1</a>
+								<a href='#'>2</a>
+								<a href='#'>3</a>
+								<a href='#'>4</a>
+								<a href='#'>5</a>
+								<a href='#'>6</a>
+								<a href='#'>7</a>
+								<a href='#'>...</a>
+								<a href='#'>15</a>
+								<a href='#'>&gt;</a>
+							</div>
+							<div className={s.paginator_filter_mobile}>
+								<a href='#'>&lt;</a>
+								<a className={s.paginator_active_mobile} href='#'>1</a>
+								<a href='#'>2</a>
+								<a href='#'>3</a>
+
+								<a href='#'>...</a>
+								<a href='#'>15</a>
+								<a href='#'>&gt;</a>
+							</div>
+
 						</div>
+
 					</div>
+
 				</div>
 				<div className={s.viewing_history}>
-					<h3 className={s.viewing_history_text}>
-						Вы недавно просмотрели
-					</h3>
+					<div className={s.viewing_history_body}>
+
+						<div className={s.viewing_history_text}>
+							Вы недавно просмотрели
+						</div>
+						<div className={s.viewing_history_paginator}>
+							<a className={s.viewing_history_paginator_a1} href='#'>&lt;</a>
+
+
+							<a className={s.viewing_history_paginator_a2} href='#'>&gt;</a>
+						</div>
+
+					</div>
+
 					<div className={s.viewing_history_carts}>
-						<div className={s.history_carts}>1</div>
-						<div className={s.history_carts}>2</div>
-						<div className={s.history_carts}>3</div>
-						<div className={s.history_carts}>4</div>
+						<div className={s.history_carts}>
+							<div className={s.product_cards}>
+
+								<div className={s.filter_castle}>
+									<div className={s.filter_castle_buttons}>
+										<div className={s.filter_castle_availability} >
+											<button className={s.filter_castle_button_1}>
+												<img src='app/img/button_none.png' />  </button>
+											<p className={s.filter_castle_availability_p}>Нет в наличии </p>
+										</div>
+
+										<button className={s.filter_castle_button_2}>SALE </button></div>
+									<div className={s.filter_castle_button_body3}>
+
+										<button className={s.filter_castle_button_3}>
+											<img src='app/img/podarok.png' /> Подарок </button>
+									</div>
+
+								</div>
+								<div className={s.price_card}>
+									<div className={s.price_card_reviews}>
+										<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
+										<p className={s.price_card_reviews_p}>(12) отзывов</p></div>
+									<div className={s.price_card_name}>
+										<p className={s.price_card_name_p}>Вариативный замок Golden Soft для отеля</p>
+									</div>
+									<div className={s.price_sum_card}>
+										<p className={s.price_current_price}>7 000₽</p>
+										<p className={s.price_old_price}>8 000₽</p>
+									</div>
+
+
+								</div>
+
+
+
+
+
+
+
+
+
+							</div>
+						</div>
+						<div className={s.history_carts}>
+							<div className={s.product_cards}>
+
+								<div className={s.filter_castle_2}>
+									<div className={s.filter_castle_buttons}>
+										<div className={s.filter_castle_availability} >
+											<button className={s.filter_castle_button_1}>
+												<img src='app/img/button_ok.png' />  </button>
+											<p className={s.filter_castle_availability_p}>В наличии </p>
+										</div>
+
+										<button className={s.filter_castle_button_2}>SALE </button></div>
+									<div className={s.filter_castle_button_body3}>
+
+										<button className={s.filter_castle_button_3}>
+											<img src='app/img/podarok.png' /> Подарок </button>
+									</div>
+
+								</div>
+								<div className={s.price_card}>
+									<div className={s.price_card_reviews}>
+										<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
+										<p className={s.price_card_reviews_p}>(12) отзывов</p></div>
+									<div className={s.price_card_name}>
+										<p className={s.price_card_name_p}>Дверной Замок Golden Soft для<br /> офиса</p>
+									</div>
+									<div className={s.price_sum_card}>
+										<p className={s.price_current_price_2}>33 000₽</p>
+										<p className={s.price_old_price}>39 000₽</p>
+									</div>
+
+
+								</div>
+
+							</div></div>
+						<div className={s.history_carts}>
+							<div className={s.product_cards}>
+
+								<div className={s.filter_castle_3}>
+									<div className={s.filter_castle_buttons}>
+										<div className={s.filter_castle_availability} >
+											<button className={s.filter_castle_button_1}>
+												<img src='app/img/button_ok.png' />  </button>
+											<p className={s.filter_castle_availability_p}>В наличии </p>
+										</div>
+
+										<button className={s.filter_castle_button_2}>SALE </button></div>
+									<div className={s.filter_castle_button_body3}>
+
+										<button className={s.filter_castle_button_3}>
+											<img src='app/img/podarok.png' /> Подарок </button>
+									</div>
+
+								</div>
+								<div className={s.price_card}>
+									<div className={s.price_card_reviews}>
+										<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
+										<p className={s.price_card_reviews_p}>(12) отзывов</p></div>
+									<div className={s.price_card_name}>
+										<p className={s.price_card_name_p}>Дверной Замок Golden Soft для<br /> офиса</p>
+									</div>
+									<div className={s.price_sum_card}>
+										<p className={s.price_current_price}>9 000₽</p>
+										<p className={s.price_old_price}>12 000₽</p>
+									</div>
+
+
+								</div>
+
+
+
+
+
+
+
+
+
+							</div>
+						</div>
+						<div className={s.history_carts}>
+							<div className={s.product_cards}>
+
+								<div className={s.filter_castle}>
+									<div className={s.filter_castle_buttons}>
+										<div className={s.filter_castle_availability} >
+											<button className={s.filter_castle_button_1}>
+												<img src='app/img/button_none.png' />  </button>
+											<p className={s.filter_castle_availability_p}>Нет в наличии </p>
+										</div>
+
+										<button className={s.filter_castle_button_2}>SALE </button></div>
+									<div className={s.filter_castle_button_body3}>
+
+										<button className={s.filter_castle_button_3}>
+											<img src='app/img/podarok.png' /> Подарок </button>
+									</div>
+
+								</div>
+								<div className={s.price_card}>
+									<div className={s.price_card_reviews}>
+										<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
+										<p className={s.price_card_reviews_p}>(12) отзывов</p></div>
+									<div className={s.price_card_name}>
+										<p className={s.price_card_name_p}>Вариативный замок Golden Soft для отеля</p>
+									</div>
+									<div className={s.price_sum_card}>
+										<p className={s.price_current_price}>7 000₽</p>
+										<p className={s.price_old_price}>8 000₽</p>
+									</div>
+
+
+								</div>
+
+
+
+
+
+
+
+
+
+							</div>
+						</div>
+						<div className={s.history_carts}>
+							<div className={s.product_cards}>
+
+								<div className={s.filter_castle_2}>
+									<div className={s.filter_castle_buttons}>
+										<div className={s.filter_castle_availability} >
+											<button className={s.filter_castle_button_1}>
+												<img src='app/img/button_ok.png' />  </button>
+											<p className={s.filter_castle_availability_p}>В наличии </p>
+										</div>
+
+										<button className={s.filter_castle_button_2}>SALE </button></div>
+									<div className={s.filter_castle_button_body3}>
+
+										<button className={s.filter_castle_button_3}>
+											<img src='app/img/podarok.png' /> Подарок </button>
+									</div>
+
+								</div>
+								<div className={s.price_card}>
+									<div className={s.price_card_reviews}>
+										<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
+										<p className={s.price_card_reviews_p}>(12) отзывов</p></div>
+									<div className={s.price_card_name}>
+										<p className={s.price_card_name_p}>Дверной Замок Golden Soft для<br /> офиса</p>
+									</div>
+									<div className={s.price_sum_card}>
+										<p className={s.price_current_price_2}>33 000₽</p>
+										<p className={s.price_old_price}>39 000₽</p>
+									</div>
+
+
+								</div>
+
+							</div></div>
+						<div className={s.history_carts}>
+							<div className={s.product_cards}>
+
+								<div className={s.filter_castle_3}>
+									<div className={s.filter_castle_buttons}>
+										<div className={s.filter_castle_availability} >
+											<button className={s.filter_castle_button_1}>
+												<img src='app/img/button_ok.png' />  </button>
+											<p className={s.filter_castle_availability_p}>В наличии </p>
+										</div>
+
+										<button className={s.filter_castle_button_2}>SALE </button></div>
+									<div className={s.filter_castle_button_body3}>
+
+										<button className={s.filter_castle_button_3}>
+											<img src='app/img/podarok.png' /> Подарок </button>
+									</div>
+
+								</div>
+								<div className={s.price_card}>
+									<div className={s.price_card_reviews}>
+										<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
+										<p className={s.price_card_reviews_p}>(12) отзывов</p></div>
+									<div className={s.price_card_name}>
+										<p className={s.price_card_name_p}>Дверной Замок Golden Soft для<br /> офиса</p>
+									</div>
+									<div className={s.price_sum_card}>
+										<p className={s.price_current_price}>9 000₽</p>
+										<p className={s.price_old_price}>12 000₽</p>
+									</div>
+
+
+								</div>
+
+
+
+
+
+
+
+
+
+							</div>
+						</div>
+
 					</div>
 				</div>
 				<div className={s.ceo_product}>
@@ -299,28 +1053,29 @@ export function Welcome() {
 					</div>
 				</div>
 
-				<div className={s.ul}>
-					<h3 className={s.ul_h3}>Мы Вам перезвоним</h3>
-					<p className={s.ul_text}>
-						Если у вас возникли какие-то вопросы или проблемы,
-						заполните форму и мы Вам перезвоним.
-					</p>
-					<div className={s.ul_forms}>
-						<input
-							placeholder="Ваше имя"
-							className={s.ul_input}
-							type="text"
-						></input>
-						<input
-							placeholder="Ваш Email"
-							className={s.ul_input}
-							type="text"
-						></input>
-						<button className={s.ul_button}>Отправить</button>
-					</div>
-				</div>
 
-			</div>
+
+			</div >
+			<div className={s.ul_container} ><div className={s.ul}>
+				<h3 className={s.ul_h3}>Мы Вам перезвоним</h3>
+				<p className={s.ul_text}>
+					Если у вас возникли какие-то вопросы или проблемы,
+					заполните форму и мы Вам перезвоним.
+				</p>
+				<div className={s.ul_forms}>
+					<input
+						placeholder="Ваше имя"
+						className={s.ul_input}
+						type="text"
+					></input>
+					<input
+						placeholder="Ваш Email"
+						className={s.ul_input}
+						type="text"
+					></input>
+					<button className={s.ul_button}>Отправить</button>
+				</div>
+			</div></div>
 			<div className={s.footer_body}>
 				<div className={s.footer}>
 					<div className={s.footer_logo}>
@@ -363,7 +1118,7 @@ export function Welcome() {
 								Наши контакты
 							</h1>
 							<br />
-							<h1 className={s.footer_ul_a}>Телефоны</h1>
+							<h1 className={s.footer_ul_p}>Телефоны</h1>
 
 							<a className={s.footer_ul_a} href="#">
 								+7 (988) 565 00 38
@@ -372,7 +1127,7 @@ export function Welcome() {
 							<a className={s.footer_ul_a} href="#">
 								+375 33 662 82 56
 							</a>
-							<h1 className={s.footer_ul_a}>Email</h1>
+							<h1 className={s.footer_ul_p}>Email</h1>
 							<a className={s.footer_ul_a} href="#">
 								vladpertcev@mail.ru
 							</a>
@@ -417,6 +1172,6 @@ export function Welcome() {
 					</p>
 				</div>
 			</div>
-		</div>
+		</div >
 	)
 }
