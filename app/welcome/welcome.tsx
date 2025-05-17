@@ -144,7 +144,10 @@ export function Welcome() {
 							Сбросить фильтры
 						</button>
 						<button className={s.filter_button_2}>
-							Популярности
+							<p className={s.filter_p_2}> Популярности</p> <div className={s.filter_img_2}>	<img
+
+								src="app/img/Vector_2.png"
+							/></div>
 						</button>
 
 					</div>
@@ -222,7 +225,7 @@ export function Welcome() {
 										<div className={s.price_card_name}>
 											<p className={s.price_card_name_p}>Дверной Замок Golden Soft для<br /> офиса</p>
 										</div>
-										<div className={s.price_sum_card}>
+										<div className={s.price_sum_card_2}>
 											<p className={s.price_current_price_2}>33 000₽</p>
 											<p className={s.price_old_price}>39 000₽</p>
 										</div>
@@ -340,7 +343,7 @@ export function Welcome() {
 										<div className={s.price_card_name}>
 											<p className={s.price_card_name_p}>Дверной Замок Golden Soft для<br /> офиса</p>
 										</div>
-										<div className={s.price_sum_card}>
+										<div className={s.price_sum_card_2}>
 											<p className={s.price_current_price_2}>33 000₽</p>
 											<p className={s.price_old_price}>39 000₽</p>
 										</div>
@@ -458,7 +461,7 @@ export function Welcome() {
 										<div className={s.price_card_name}>
 											<p className={s.price_card_name_p}>Дверной Замок Golden Soft для<br /> офиса</p>
 										</div>
-										<div className={s.price_sum_card}>
+										<div className={s.price_sum_card_2}>
 											<p className={s.price_current_price_2}>33 000₽</p>
 											<p className={s.price_old_price}>39 000₽</p>
 										</div>
@@ -576,7 +579,7 @@ export function Welcome() {
 										<div className={s.price_card_name}>
 											<p className={s.price_card_name_p}>Дверной Замок Golden Soft для<br /> офиса</p>
 										</div>
-										<div className={s.price_sum_card}>
+										<div className={s.price_sum_card_2}>
 											<p className={s.price_current_price_2}>33 000₽</p>
 											<p className={s.price_old_price}>39 000₽</p>
 										</div>

@@ -15,7 +15,7 @@ a {
 
 .body {
 	margin: 0;
-	/* background-color: #fffee6; */
+
 }
 
 .body_container {
@@ -24,7 +24,7 @@ a {
 }
 
 .header {
-	/* width: 1245px; */
+
 	margin: 0 auto;
 	height: 126px;
 	border-bottom: 1px solid #c4cdd5;
@@ -33,24 +33,23 @@ a {
 .header_container {
 	max-width: 1245px;
 	margin: 0 auto;
-	/* padding: 10px; */
+
 	display: grid;
 	grid-template-columns: 150px 1fr 1fr;
 }
 
 .header_container_container {
+	padding: 10px 0px;
 	max-width: 1245px;
 	margin: 0 auto;
-	/* padding: 10px; */
+
 
 }
 
 .header_advertisement {
 	max-width: 1245px;
 	margin: 0 auto;
-	/* display: grid;
 
-	grid-template-columns: 980px 1fr; */
 
 
 
@@ -104,7 +103,7 @@ a {
 }
 
 .header_contacts {
-
+	gap: 10px;
 	display: grid;
 	grid-template-columns: 1fr 80px;
 	place-content: center;
@@ -112,6 +111,9 @@ a {
 
 
 }
+
+
+
 
 .header_contacts_img {
 	width: 100px;
@@ -206,8 +208,6 @@ a {
 }
 
 .filter_block {
-
-
 	display: grid;
 	gap: 30px;
 	grid-template-columns: 300px 1fr;
@@ -216,7 +216,6 @@ a {
 .filter_castle {
 	width: 100%;
 	height: 320px;
-
 	background-image: url("app/img/замок1.png");
 	background-repeat: no-repeat;
 	background-position: center;
@@ -227,7 +226,6 @@ a {
 .filter_castle_2 {
 	width: 100%;
 	height: 320px;
-
 	background-image: url("app/img/замок_2.png");
 	background-repeat: no-repeat;
 	background-position: center;
@@ -361,6 +359,15 @@ a {
 
 }
 
+.price_current_price_2 {
+	margin: 0px 10px 0px 0px;
+	font-family: SF Pro Text;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 100%;
+	letter-spacing: 0%;
+}
+
 .viewing_history_paginator {
 
 	height: 40px;
@@ -443,8 +450,29 @@ a {
 	height: 40px;
 	gap: 10px;
 	background-color: #ffffff;
+	display: grid;
+	grid-template-columns: 1fr 30px;
+	justify-content: space-between;
 }
 
+.filter_img_2 {
+	display: inline;
+	place-items: center;
+	place-self: center;
+}
+
+.filter_p_2 {
+	display: inline;
+	font-family: SF Pro Text;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 26px;
+	letter-spacing: 0%;
+	vertical-align: middle;
+	place-items: center;
+	place-self: center;
+
+}
 
 .filter {
 	height: 940px;
@@ -690,13 +718,15 @@ a {
 	height: 50px;
 	background-color: #161C240A;
 	margin: 0 10px;
+	padding: 0;
 }
 
 .ul_button {
 	color: white;
 	width: 240px;
 	height: 50px;
-	margin: 0 10px;
+	margin: 0px 10px;
+	padding: 0;
 	background-color: #78dbe2;
 }
 
@@ -949,6 +979,7 @@ a {
 	.ceo_product_mobile {
 		/* display: grid; */
 		display: block;
+		padding: 10px;
 
 
 
@@ -1161,6 +1192,22 @@ a {
 
 	}
 
+	.filter_button_1 {
+		display: none;
+	}
+
+	.filter_button_3 {
+		display: block;
+		border: 1px solid #c4cdd5;
+		justify-content: center;
+		width: 100%;
+		height: 50px;
+		padding: 0;
+		margin: 0;
+		color: white;
+		background-color: #4295E4;
+	}
+
 	.filter_block {
 
 		display: grid;
@@ -1180,13 +1227,25 @@ a {
 }
 
 @media (max-width:485px) {
-	/* .filter_product_cards {
-		width: 100%;
+	.filter_product_cards {
+
 		display: grid;
 		gap: 10px;
 		grid-template-columns: 1fr;
 		border: 1px solid #c4cdd5;
-	} */
+	}
+
+	.filter_block {
+		justify-content: center;
+	}
+
+	.text_h3 {
+		font-family: SF Pro Text;
+		font-weight: 600;
+		font-size: 16px;
+		padding: 15px;
+		height: 28px;
+	}
 }
 
 @media (max-width: 376px) {
@@ -1331,13 +1390,7 @@ a {
 
 	}
 
-	.text_h3 {
-		font-family: SF Pro Text;
-		font-weight: 600;
-		font-size: 16px;
-		padding: 15px;
-		height: 28px;
-	}
+
 
 	.button {
 
@@ -1360,13 +1413,7 @@ a {
 
 	.filter_button_3 {
 		display: block;
-		border: 1px solid #c4cdd5;
-		justify-content: center;
-		width: 100%;
-		height: 50px;
-		padding: 0px;
-		color: white;
-		background-color: #4295E4;
+
 	}
 
 	.filter {
@@ -1532,7 +1579,6 @@ a {
 		font-size: 14px;
 
 	}
-
 
 
 	.text_p3 {
