@@ -494,7 +494,7 @@ dd {
 .filter_button_1 {
 	border: 1px solid #c4cdd5;
 	float: left;
-	width: 288px;
+	width: 300px;
 	height: 40px;
 	gap: 10px;
 	background-color: #ffffff;
@@ -503,7 +503,7 @@ dd {
 .filter_button_2 {
 	border: 1px solid #c4cdd5;
 	float: right;
-	width: 288px;
+	width: 285px;
 	height: 40px;
 	gap: 10px;
 	background-color: #ffffff;
@@ -776,7 +776,7 @@ dd {
 	height: 50px;
 	background-color: #161C240A;
 	margin: 0 10px;
-	padding: 0;
+	padding: 0px 10px;
 }
 
 .ul_button {

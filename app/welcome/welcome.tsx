@@ -1114,7 +1114,7 @@ export function Welcome() {
 						type="text"
 					></input>
 					<input
-						placeholder="Ваш Email"
+						placeholder=" Ваш Email"
 						className={s.ul_input}
 						type="text"
 					></input>
