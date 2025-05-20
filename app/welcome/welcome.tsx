@@ -83,11 +83,11 @@ export function Welcome() {
 
 
 								<div className={s.box_namber}>
-									<span> <img
+									<span className={s.box_namber_span}> <img
 										className={s.box_namber_img}
 										src="app/img/phone-call 1.png"
-									/> +7 (966) 55 88 499</span>
-									<span> <a href="#">Обратный звонок</a></span>
+									/> +7 (966) 55 88 499 </span>
+									<span> <a className={s.box_namber_a} href="#">Обратный звонок</a></span>
 								</div>
 							</div>
 							<div
@@ -151,9 +151,19 @@ export function Welcome() {
 						</button>
 
 					</div>
-					<button className={s.filter_button_3}>
-						Фильтр
-					</button>
+					<div className={s.block_2}>
+						<button className={s.filter_button_3}>
+							Фильтр
+						</button>
+						<br />
+						<button className={s.filter_button_4}>
+							<p className={s.filter_p_4}> Популярности</p> <div className={s.filter_img_4}>	<img
+
+								src="app/img/Vector_2.png"
+							/></div>
+						</button>
+					</div>
+
 					<div className={s.filter_block}>
 						<div className={s.filter}></div>
 						<div className={s.filter_product} >
@@ -161,20 +171,18 @@ export function Welcome() {
 								<div className={s.product_cards}>
 
 									<div className={s.filter_castle}>
-										<img className={s.filter_castle_img} src='app/img/castle_1.png' alt='Wait for the invention to narrow down now' />
-										<div className={s.filter_castle_buttons}>
-											<div className={s.filter_castle_availability} >
-												<button className={s.filter_castle_button_1}>
-													<img src='app/img/button_none.png' />  </button>
-												<p className={s.filter_castle_availability_p}>Нет в наличии </p>
-											</div>
+										<button className={s.filter_castle_button_1}>
+											<img src='app/img/button_none.png' />  </button>
+										<p className={s.filter_castle_availability_p}>Нет в наличии </p>
 
-											<button className={s.filter_castle_button_2}>SALE </button></div>
+										<button className={s.filter_castle_button_2}>SALE </button>
 										<div className={s.filter_castle_button_body3}>
 
 											<button className={s.filter_castle_button_3}>
-												<img src='app/img/podarok.png' /> Подарок </button>
+												<img className={s.filter_castle_podarok_3} src='app/img/podarok.png' /> Подарок </button>
 										</div>
+										<img className={s.filter_castle_img} src='app/img/castle_1.png' alt='Wait for the invention to narrow down now' />
+
 
 									</div>
 									<div className={s.price_card}>
@@ -203,23 +211,27 @@ export function Welcome() {
 								</div>
 								<div className={s.product_cards}>
 
-									<div className={s.filter_castle_2}>
-										<img className={s.filter_castle_img} src='app/img/castle_2.png' alt='Wait for the invention to narrow down now' />
-										<div className={s.filter_castle_buttons}>
-											<div className={s.filter_castle_availability} >
-												<button className={s.filter_castle_button_1}>
-													<img src='app/img/button_ok.png' />  </button>
-												<p className={s.filter_castle_availability_p}>В наличии </p>
-											</div>
+									< div className={s.filter_castle_2}>
+										<button className={s.filter_castle_button_1}>
+											<img src='app/img/button_ok.png' />
+										</button>
+										<p className={s.filter_castle_availability_p}>В наличии </p>
 
-											<button className={s.filter_castle_button_2}>SALE </button></div>
+
+										<button className={s.filter_castle_button_2}>SALE </button>
 										<div className={s.filter_castle_button_body3}>
 
 											<button className={s.filter_castle_button_3}>
 												<img src='app/img/podarok.png' /> Подарок </button>
-										</div>
 
+
+										</div>
+										<img className={s.filter_castle_img} src='app/img/castle_2.png' alt='Wait for the invention to narrow down now' />
 									</div>
+
+
+
+
 									<div className={s.price_card}>
 										<div className={s.price_card_reviews}>
 											<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
@@ -239,22 +251,22 @@ export function Welcome() {
 								<div className={s.product_cards}>
 
 									<div className={s.filter_castle_3}>
-										<img className={s.filter_castle_img} src='app/img/castle_3.png' alt='Wait for the invention to narrow down now' />
-										<div className={s.filter_castle_buttons}>
-											<div className={s.filter_castle_availability} >
-												<button className={s.filter_castle_button_1}>
-													<img src='app/img/button_ok.png' />  </button>
-												<p className={s.filter_castle_availability_p}>В наличии </p>
-											</div>
-											<button className={s.filter_castle_button_2}>SALE </button>
-										</div>
+
+										<button className={s.filter_castle_button_1}>
+											<img src='app/img/button_ok.png' />  </button>
+										<p className={s.filter_castle_availability_p}>В наличии </p>
+
+										<button className={s.filter_castle_button_2}>SALE </button>
+
 										<div className={s.filter_castle_button_body3}>
 											<button className={s.filter_castle_button_3}>
 												<img src='app/img/podarok.png' /> Подарок </button>
 										</div>
 
-
+										<img className={s.filter_castle_img} src='app/img/castle_3.png' alt='Wait for the invention to narrow down now' />
 									</div>
+
+
 									<div className={s.price_card}>
 										<div className={s.price_card_reviews}>
 											<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
@@ -282,20 +294,18 @@ export function Welcome() {
 								<div className={s.product_cards}>
 
 									<div className={s.filter_castle}>
-										<img className={s.filter_castle_img} src='app/img/castle_1.png' alt='Wait for the invention to narrow down now' />
-										<div className={s.filter_castle_buttons}>
-											<div className={s.filter_castle_availability} >
-												<button className={s.filter_castle_button_1}>
-													<img src='app/img/button_none.png' />  </button>
-												<p className={s.filter_castle_availability_p}>Нет в наличии </p>
-											</div>
+										<button className={s.filter_castle_button_1}>
+											<img src='app/img/button_none.png' />  </button>
+										<p className={s.filter_castle_availability_p}>Нет в наличии </p>
 
-											<button className={s.filter_castle_button_2}>SALE </button></div>
+										<button className={s.filter_castle_button_2}>SALE </button>
 										<div className={s.filter_castle_button_body3}>
 
 											<button className={s.filter_castle_button_3}>
-												<img src='app/img/podarok.png' /> Подарок </button>
+												<img className={s.filter_castle_podarok_3} src='app/img/podarok.png' /> Подарок </button>
 										</div>
+										<img className={s.filter_castle_img} src='app/img/castle_1.png' alt='Wait for the invention to narrow down now' />
+
 
 									</div>
 									<div className={s.price_card}>
@@ -324,23 +334,27 @@ export function Welcome() {
 								</div>
 								<div className={s.product_cards}>
 
-									<div className={s.filter_castle_2}>
-										<img className={s.filter_castle_img} src='app/img/castle_2.png' alt='Wait for the invention to narrow down now' />
-										<div className={s.filter_castle_buttons}>
-											<div className={s.filter_castle_availability} >
-												<button className={s.filter_castle_button_1}>
-													<img src='app/img/button_ok.png' />  </button>
-												<p className={s.filter_castle_availability_p}>В наличии </p>
-											</div>
+									< div className={s.filter_castle_2}>
+										<button className={s.filter_castle_button_1}>
+											<img src='app/img/button_ok.png' />
+										</button>
+										<p className={s.filter_castle_availability_p}>В наличии </p>
 
-											<button className={s.filter_castle_button_2}>SALE </button></div>
+
+										<button className={s.filter_castle_button_2}>SALE </button>
 										<div className={s.filter_castle_button_body3}>
 
 											<button className={s.filter_castle_button_3}>
 												<img src='app/img/podarok.png' /> Подарок </button>
-										</div>
 
+
+										</div>
+										<img className={s.filter_castle_img} src='app/img/castle_2.png' alt='Wait for the invention to narrow down now' />
 									</div>
+
+
+
+
 									<div className={s.price_card}>
 										<div className={s.price_card_reviews}>
 											<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
@@ -360,22 +374,22 @@ export function Welcome() {
 								<div className={s.product_cards}>
 
 									<div className={s.filter_castle_3}>
-										<img className={s.filter_castle_img} src='app/img/castle_3.png' alt='Wait for the invention to narrow down now' />
-										<div className={s.filter_castle_buttons}>
-											<div className={s.filter_castle_availability} >
-												<button className={s.filter_castle_button_1}>
-													<img src='app/img/button_ok.png' />  </button>
-												<p className={s.filter_castle_availability_p}>В наличии </p>
-											</div>
-											<button className={s.filter_castle_button_2}>SALE </button>
-										</div>
+
+										<button className={s.filter_castle_button_1}>
+											<img src='app/img/button_ok.png' />  </button>
+										<p className={s.filter_castle_availability_p}>В наличии </p>
+
+										<button className={s.filter_castle_button_2}>SALE </button>
+
 										<div className={s.filter_castle_button_body3}>
 											<button className={s.filter_castle_button_3}>
 												<img src='app/img/podarok.png' /> Подарок </button>
 										</div>
 
-
+										<img className={s.filter_castle_img} src='app/img/castle_3.png' alt='Wait for the invention to narrow down now' />
 									</div>
+
+
 									<div className={s.price_card}>
 										<div className={s.price_card_reviews}>
 											<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
@@ -403,20 +417,18 @@ export function Welcome() {
 								<div className={s.product_cards}>
 
 									<div className={s.filter_castle}>
-										<img className={s.filter_castle_img} src='app/img/castle_1.png' alt='Wait for the invention to narrow down now' />
-										<div className={s.filter_castle_buttons}>
-											<div className={s.filter_castle_availability} >
-												<button className={s.filter_castle_button_1}>
-													<img src='app/img/button_none.png' />  </button>
-												<p className={s.filter_castle_availability_p}>Нет в наличии </p>
-											</div>
+										<button className={s.filter_castle_button_1}>
+											<img src='app/img/button_none.png' />  </button>
+										<p className={s.filter_castle_availability_p}>Нет в наличии </p>
 
-											<button className={s.filter_castle_button_2}>SALE </button></div>
+										<button className={s.filter_castle_button_2}>SALE </button>
 										<div className={s.filter_castle_button_body3}>
 
 											<button className={s.filter_castle_button_3}>
-												<img src='app/img/podarok.png' /> Подарок </button>
+												<img className={s.filter_castle_podarok_3} src='app/img/podarok.png' /> Подарок </button>
 										</div>
+										<img className={s.filter_castle_img} src='app/img/castle_1.png' alt='Wait for the invention to narrow down now' />
+
 
 									</div>
 									<div className={s.price_card}>
@@ -445,23 +457,27 @@ export function Welcome() {
 								</div>
 								<div className={s.product_cards}>
 
-									<div className={s.filter_castle_2}>
-										<img className={s.filter_castle_img} src='app/img/castle_2.png' alt='Wait for the invention to narrow down now' />
-										<div className={s.filter_castle_buttons}>
-											<div className={s.filter_castle_availability} >
-												<button className={s.filter_castle_button_1}>
-													<img src='app/img/button_ok.png' />  </button>
-												<p className={s.filter_castle_availability_p}>В наличии </p>
-											</div>
+									< div className={s.filter_castle_2}>
+										<button className={s.filter_castle_button_1}>
+											<img src='app/img/button_ok.png' />
+										</button>
+										<p className={s.filter_castle_availability_p}>В наличии </p>
 
-											<button className={s.filter_castle_button_2}>SALE </button></div>
+
+										<button className={s.filter_castle_button_2}>SALE </button>
 										<div className={s.filter_castle_button_body3}>
 
 											<button className={s.filter_castle_button_3}>
 												<img src='app/img/podarok.png' /> Подарок </button>
-										</div>
 
+
+										</div>
+										<img className={s.filter_castle_img} src='app/img/castle_2.png' alt='Wait for the invention to narrow down now' />
 									</div>
+
+
+
+
 									<div className={s.price_card}>
 										<div className={s.price_card_reviews}>
 											<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
@@ -481,22 +497,22 @@ export function Welcome() {
 								<div className={s.product_cards}>
 
 									<div className={s.filter_castle_3}>
-										<img className={s.filter_castle_img} src='app/img/castle_3.png' alt='Wait for the invention to narrow down now' />
-										<div className={s.filter_castle_buttons}>
-											<div className={s.filter_castle_availability} >
-												<button className={s.filter_castle_button_1}>
-													<img src='app/img/button_ok.png' />  </button>
-												<p className={s.filter_castle_availability_p}>В наличии </p>
-											</div>
-											<button className={s.filter_castle_button_2}>SALE </button>
-										</div>
+
+										<button className={s.filter_castle_button_1}>
+											<img src='app/img/button_ok.png' />  </button>
+										<p className={s.filter_castle_availability_p}>В наличии </p>
+
+										<button className={s.filter_castle_button_2}>SALE </button>
+
 										<div className={s.filter_castle_button_body3}>
 											<button className={s.filter_castle_button_3}>
 												<img src='app/img/podarok.png' /> Подарок </button>
 										</div>
 
-
+										<img className={s.filter_castle_img} src='app/img/castle_3.png' alt='Wait for the invention to narrow down now' />
 									</div>
+
+
 									<div className={s.price_card}>
 										<div className={s.price_card_reviews}>
 											<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
@@ -524,20 +540,18 @@ export function Welcome() {
 								<div className={s.product_cards}>
 
 									<div className={s.filter_castle}>
-										<img className={s.filter_castle_img} src='app/img/castle_1.png' alt='Wait for the invention to narrow down now' />
-										<div className={s.filter_castle_buttons}>
-											<div className={s.filter_castle_availability} >
-												<button className={s.filter_castle_button_1}>
-													<img src='app/img/button_none.png' />  </button>
-												<p className={s.filter_castle_availability_p}>Нет в наличии </p>
-											</div>
+										<button className={s.filter_castle_button_1}>
+											<img src='app/img/button_none.png' />  </button>
+										<p className={s.filter_castle_availability_p}>Нет в наличии </p>
 
-											<button className={s.filter_castle_button_2}>SALE </button></div>
+										<button className={s.filter_castle_button_2}>SALE </button>
 										<div className={s.filter_castle_button_body3}>
 
 											<button className={s.filter_castle_button_3}>
-												<img src='app/img/podarok.png' /> Подарок </button>
+												<img className={s.filter_castle_podarok_3} src='app/img/podarok.png' /> Подарок </button>
 										</div>
+										<img className={s.filter_castle_img} src='app/img/castle_1.png' alt='Wait for the invention to narrow down now' />
+
 
 									</div>
 									<div className={s.price_card}>
@@ -566,23 +580,27 @@ export function Welcome() {
 								</div>
 								<div className={s.product_cards}>
 
-									<div className={s.filter_castle_2}>
-										<img className={s.filter_castle_img} src='app/img/castle_2.png' alt='Wait for the invention to narrow down now' />
-										<div className={s.filter_castle_buttons}>
-											<div className={s.filter_castle_availability} >
-												<button className={s.filter_castle_button_1}>
-													<img src='app/img/button_ok.png' />  </button>
-												<p className={s.filter_castle_availability_p}>В наличии </p>
-											</div>
+									< div className={s.filter_castle_2}>
+										<button className={s.filter_castle_button_1}>
+											<img src='app/img/button_ok.png' />
+										</button>
+										<p className={s.filter_castle_availability_p}>В наличии </p>
 
-											<button className={s.filter_castle_button_2}>SALE </button></div>
+
+										<button className={s.filter_castle_button_2}>SALE </button>
 										<div className={s.filter_castle_button_body3}>
 
 											<button className={s.filter_castle_button_3}>
 												<img src='app/img/podarok.png' /> Подарок </button>
-										</div>
 
+
+										</div>
+										<img className={s.filter_castle_img} src='app/img/castle_2.png' alt='Wait for the invention to narrow down now' />
 									</div>
+
+
+
+
 									<div className={s.price_card}>
 										<div className={s.price_card_reviews}>
 											<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
@@ -602,22 +620,22 @@ export function Welcome() {
 								<div className={s.product_cards}>
 
 									<div className={s.filter_castle_3}>
-										<img className={s.filter_castle_img} src='app/img/castle_3.png' alt='Wait for the invention to narrow down now' />
-										<div className={s.filter_castle_buttons}>
-											<div className={s.filter_castle_availability} >
-												<button className={s.filter_castle_button_1}>
-													<img src='app/img/button_ok.png' />  </button>
-												<p className={s.filter_castle_availability_p}>В наличии </p>
-											</div>
-											<button className={s.filter_castle_button_2}>SALE </button>
-										</div>
+
+										<button className={s.filter_castle_button_1}>
+											<img src='app/img/button_ok.png' />  </button>
+										<p className={s.filter_castle_availability_p}>В наличии </p>
+
+										<button className={s.filter_castle_button_2}>SALE </button>
+
 										<div className={s.filter_castle_button_body3}>
 											<button className={s.filter_castle_button_3}>
 												<img src='app/img/podarok.png' /> Подарок </button>
 										</div>
 
-
+										<img className={s.filter_castle_img} src='app/img/castle_3.png' alt='Wait for the invention to narrow down now' />
 									</div>
+
+
 									<div className={s.price_card}>
 										<div className={s.price_card_reviews}>
 											<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
@@ -689,20 +707,18 @@ export function Welcome() {
 							<div className={s.product_cards}>
 
 								<div className={s.filter_castle}>
-									<img className={s.filter_castle_img} src='app/img/castle_1.png' alt='Wait for the invention to narrow down now' />
-									<div className={s.filter_castle_buttons}>
-										<div className={s.filter_castle_availability} >
-											<button className={s.filter_castle_button_1}>
-												<img src='app/img/button_none.png' />  </button>
-											<p className={s.filter_castle_availability_p}>Нет в наличии </p>
-										</div>
+									<button className={s.filter_castle_button_1}>
+										<img src='app/img/button_none.png' />  </button>
+									<p className={s.filter_castle_availability_p}>Нет в наличии </p>
 
-										<button className={s.filter_castle_button_2}>SALE </button></div>
+									<button className={s.filter_castle_button_2}>SALE </button>
 									<div className={s.filter_castle_button_body3}>
 
 										<button className={s.filter_castle_button_3}>
-											<img src='app/img/podarok.png' /> Подарок </button>
+											<img className={s.filter_castle_podarok_3} src='app/img/podarok.png' /> Подарок </button>
 									</div>
+									<img className={s.filter_castle_img} src='app/img/castle_1.png' alt='Wait for the invention to narrow down now' />
+
 
 								</div>
 								<div className={s.price_card}>
@@ -733,23 +749,27 @@ export function Welcome() {
 						<div className={s.history_carts}>
 							<div className={s.product_cards}>
 
-								<div className={s.filter_castle_2}>
-									<img className={s.filter_castle_img} src='app/img/castle_2.png' alt='Wait for the invention to narrow down now' />
-									<div className={s.filter_castle_buttons}>
-										<div className={s.filter_castle_availability} >
-											<button className={s.filter_castle_button_1}>
-												<img src='app/img/button_ok.png' />  </button>
-											<p className={s.filter_castle_availability_p}>В наличии </p>
-										</div>
+								< div className={s.filter_castle_2}>
+									<button className={s.filter_castle_button_1}>
+										<img src='app/img/button_ok.png' />
+									</button>
+									<p className={s.filter_castle_availability_p}>В наличии </p>
 
-										<button className={s.filter_castle_button_2}>SALE </button></div>
+
+									<button className={s.filter_castle_button_2}>SALE </button>
 									<div className={s.filter_castle_button_body3}>
 
 										<button className={s.filter_castle_button_3}>
 											<img src='app/img/podarok.png' /> Подарок </button>
-									</div>
 
+
+									</div>
+									<img className={s.filter_castle_img} src='app/img/castle_2.png' alt='Wait for the invention to narrow down now' />
 								</div>
+
+
+
+
 								<div className={s.price_card}>
 									<div className={s.price_card_reviews}>
 										<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
@@ -771,22 +791,22 @@ export function Welcome() {
 							<div className={s.product_cards}>
 
 								<div className={s.filter_castle_3}>
-									<img className={s.filter_castle_img} src='app/img/castle_3.png' alt='Wait for the invention to narrow down now' />
-									<div className={s.filter_castle_buttons}>
-										<div className={s.filter_castle_availability} >
-											<button className={s.filter_castle_button_1}>
-												<img src='app/img/button_ok.png' />  </button>
-											<p className={s.filter_castle_availability_p}>В наличии </p>
-										</div>
-										<button className={s.filter_castle_button_2}>SALE </button>
-									</div>
+
+									<button className={s.filter_castle_button_1}>
+										<img src='app/img/button_ok.png' />  </button>
+									<p className={s.filter_castle_availability_p}>В наличии </p>
+
+									<button className={s.filter_castle_button_2}>SALE </button>
+
 									<div className={s.filter_castle_button_body3}>
 										<button className={s.filter_castle_button_3}>
 											<img src='app/img/podarok.png' /> Подарок </button>
 									</div>
 
-
+									<img className={s.filter_castle_img} src='app/img/castle_3.png' alt='Wait for the invention to narrow down now' />
 								</div>
+
+
 								<div className={s.price_card}>
 									<div className={s.price_card_reviews}>
 										<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
@@ -816,20 +836,18 @@ export function Welcome() {
 							<div className={s.product_cards}>
 
 								<div className={s.filter_castle}>
-									<img className={s.filter_castle_img} src='app/img/castle_1.png' alt='Wait for the invention to narrow down now' />
-									<div className={s.filter_castle_buttons}>
-										<div className={s.filter_castle_availability} >
-											<button className={s.filter_castle_button_1}>
-												<img src='app/img/button_none.png' />  </button>
-											<p className={s.filter_castle_availability_p}>Нет в наличии </p>
-										</div>
+									<button className={s.filter_castle_button_1}>
+										<img src='app/img/button_none.png' />  </button>
+									<p className={s.filter_castle_availability_p}>Нет в наличии </p>
 
-										<button className={s.filter_castle_button_2}>SALE </button></div>
+									<button className={s.filter_castle_button_2}>SALE </button>
 									<div className={s.filter_castle_button_body3}>
 
 										<button className={s.filter_castle_button_3}>
-											<img src='app/img/podarok.png' /> Подарок </button>
+											<img className={s.filter_castle_podarok_3} src='app/img/podarok.png' /> Подарок </button>
 									</div>
+									<img className={s.filter_castle_img} src='app/img/castle_1.png' alt='Wait for the invention to narrow down now' />
+
 
 								</div>
 								<div className={s.price_card}>
@@ -860,23 +878,27 @@ export function Welcome() {
 						<div className={s.history_carts}>
 							<div className={s.product_cards}>
 
-								<div className={s.filter_castle_2}>
-									<img className={s.filter_castle_img} src='app/img/castle_2.png' alt='Wait for the invention to narrow down now' />
-									<div className={s.filter_castle_buttons}>
-										<div className={s.filter_castle_availability} >
-											<button className={s.filter_castle_button_1}>
-												<img src='app/img/button_ok.png' />  </button>
-											<p className={s.filter_castle_availability_p}>В наличии </p>
-										</div>
+								< div className={s.filter_castle_2}>
+									<button className={s.filter_castle_button_1}>
+										<img src='app/img/button_ok.png' />
+									</button>
+									<p className={s.filter_castle_availability_p}>В наличии </p>
 
-										<button className={s.filter_castle_button_2}>SALE </button></div>
+
+									<button className={s.filter_castle_button_2}>SALE </button>
 									<div className={s.filter_castle_button_body3}>
 
 										<button className={s.filter_castle_button_3}>
 											<img src='app/img/podarok.png' /> Подарок </button>
-									</div>
 
+
+									</div>
+									<img className={s.filter_castle_img} src='app/img/castle_2.png' alt='Wait for the invention to narrow down now' />
 								</div>
+
+
+
+
 								<div className={s.price_card}>
 									<div className={s.price_card_reviews}>
 										<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />
@@ -898,22 +920,22 @@ export function Welcome() {
 							<div className={s.product_cards}>
 
 								<div className={s.filter_castle_3}>
-									<img className={s.filter_castle_img} src='app/img/castle_3.png' alt='Wait for the invention to narrow down now' />
-									<div className={s.filter_castle_buttons}>
-										<div className={s.filter_castle_availability} >
-											<button className={s.filter_castle_button_1}>
-												<img src='app/img/button_ok.png' />  </button>
-											<p className={s.filter_castle_availability_p}>В наличии </p>
-										</div>
-										<button className={s.filter_castle_button_2}>SALE </button>
-									</div>
+
+									<button className={s.filter_castle_button_1}>
+										<img src='app/img/button_ok.png' />  </button>
+									<p className={s.filter_castle_availability_p}>В наличии </p>
+
+									<button className={s.filter_castle_button_2}>SALE </button>
+
 									<div className={s.filter_castle_button_body3}>
 										<button className={s.filter_castle_button_3}>
 											<img src='app/img/podarok.png' /> Подарок </button>
 									</div>
 
-
+									<img className={s.filter_castle_img} src='app/img/castle_3.png' alt='Wait for the invention to narrow down now' />
 								</div>
+
+
 								<div className={s.price_card}>
 									<div className={s.price_card_reviews}>
 										<img className={s.price_card_reviews_img} src='app/img/рейтинг.png' />

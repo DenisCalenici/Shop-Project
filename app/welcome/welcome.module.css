@@ -186,6 +186,8 @@ dd {
 .text_a {
 	text-decoration: none;
 	padding: 10px 0px;
+	margin: 0 auto;
+	width: 97%;
 }
 
 .text_a_2 {
@@ -194,10 +196,12 @@ dd {
 }
 
 .text_h3 {
+	margin: 0 auto;
+	width: 97%;
 	font-family: SF Pro Text;
 	font-weight: 600;
 	font-size: 28px;
-	margin: 0;
+
 	padding: 10px 0px;
 	height: 42px;
 }
@@ -218,7 +222,7 @@ dd {
 
 .filter_product_cards {
 	display: block;
-	/* height: 1932px; */
+
 
 
 
@@ -245,20 +249,24 @@ dd {
 .filter_castle {
 	width: 100%;
 	height: 320px;
-	/* background-image: url("app/img/замок1.png");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 100%; */
+	position: relative;
+
 
 }
 
 .filter_castle_2 {
 	width: 100%;
 	height: 320px;
-	/* background-image: url("app/img/замок_2.png");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 100%; */
+	position: relative;
+
+
+}
+
+.filter_castle_3 {
+	width: 100%;
+	height: 320px;
+	position: relative;
+
 
 }
 
@@ -272,40 +280,35 @@ dd {
 
 }
 
-.filter_castle_3 {
-	width: 100%;
-	height: 320px;
 
-	/* background-image: url("app/img/замок_3.png");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 100%; */
-
-}
 
 .filter_castle_img {
-
-	z-index: 0;
-	position: absolute;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	position: relative;
 }
 
 .filter_castle_buttons {
 	display: flex;
 	justify-content: space-between;
 	padding: 10px;
-	z-index: 3;
+
+
 
 }
 
 
 .filter_castle_button_1 {
 	z-index: 2;
+	padding: 0;
+	width: 20px;
+	height: 22px;
 	border: #ffffff;
 	background-color: #ffffff;
-
-	position: relative;
-
-
+	position: absolute;
+	top: 17px;
+	left: 12px;
 
 
 }
@@ -315,7 +318,7 @@ dd {
 
 .filter_castle_availability {
 	z-index: 2;
-
+	position: absolute;
 	height: 28px;
 }
 
@@ -328,9 +331,9 @@ dd {
 	padding: 0;
 	margin: 0;
 	color: #454F5B;
-	position: relative;
-	bottom: 5px;
-	left: 5px;
+	position: absolute;
+	top: 19px;
+	left: 40px;
 	z-index: 2;
 
 }
@@ -345,6 +348,9 @@ dd {
 	border: #ffffff;
 	background-color: #ffffff;
 	z-index: 2;
+	position: absolute;
+	right: 12px;
+	top: 12px;
 }
 
 
@@ -360,7 +366,12 @@ dd {
 	border: #ffffff;
 	background-color: #ffffff;
 	z-index: 2;
-	position: relative;
+	position: absolute;
+	top: 70px;
+}
+
+.filter_castle_podarok_3 {
+	margin: 0px 5px 0px 0px;
 }
 
 .filter_castle_button_body3 {
@@ -474,6 +485,10 @@ dd {
 
 	height: 40px;
 	padding: 10px 0px;
+}
+
+.block_2 {
+	display: none;
 }
 
 .filter_button_1 {
@@ -916,7 +931,7 @@ dd {
 		justify-content: center;
 		position: fixed;
 		width: 100%;
-		top: 106px;
+		top: 130px;
 		left: -100%;
 		right: 0;
 		height: 100vh;
@@ -933,10 +948,13 @@ dd {
 
 	.box_namber_img {
 		display: inline;
-		padding: 3px;
+		padding: 0px 3px;
+		position: relative;
+		top: 4px;
 	}
 
 	.box_li {
+		margin: 0px 16px;
 		justify-content: center;
 		display: block;
 		border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
@@ -949,7 +967,7 @@ dd {
 		display: block;
 		color: #000;
 		font-size: 16px;
-
+		line-height: 40px;
 		height: 42px;
 	}
 
@@ -960,14 +978,21 @@ dd {
 	}
 
 	.box_namber {
-		display: flex;
-
+		display: grid;
 		height: 26px;
-		top: 265px;
+		top: 285px;
 		position: relative;
 		margin: 0px 16px;
-		justify-content: space-between;
+		grid-template-columns: 1fr 1fr;
+		place-items: center center;
+
 	}
+
+	.box_namber_span {
+		vertical-align: top;
+		height: 24px;
+	}
+
 
 	.box_logo_img {
 		display: flex;
@@ -996,7 +1021,11 @@ dd {
 		z-index: 10;
 	}
 
+	.box_namber_a {
+		color: #4295E4;
+		text-decoration: underline;
 
+	}
 
 	.ceo_product {
 		display: none;
@@ -1240,14 +1269,15 @@ dd {
 		display: none;
 	}
 
+
 	.filter_button_3 {
 		display: block;
 		border: 1px solid #c4cdd5;
 		justify-content: center;
-		width: 100%;
+		width: 97%;
 		height: 50px;
 		padding: 0;
-		margin: 0;
+		margin: 0 auto;
 		color: white;
 		background-color: #4295E4;
 	}
@@ -1267,7 +1297,62 @@ dd {
 		display: none;
 	}
 
+	.block {
+		display: none;
+	}
 
+	.block_2 {
+		display: block;
+		height: 120px;
+
+	}
+
+	.filter_button_4 {
+
+
+
+		display: grid;
+		grid-template-columns: 1fr 30px;
+		justify-content: space-between;
+
+		border: 1px solid #c4cdd5;
+		width: 97%;
+		height: 40px;
+		padding: 0;
+		margin: 0 auto;
+		gap: 10px;
+		background-color: #ffffff;
+
+
+
+
+
+	}
+
+	.filter_img_4 {
+		display: inline;
+		place-items: center;
+		place-self: center;
+	}
+
+	.filter_p_4 {
+		margin: 0;
+		width: 120px;
+		display: inline;
+		font-family: SF Pro Text;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 35px;
+		place-self: left center;
+
+
+
+
+	}
+
+	.filter_p_4 p {
+		margin: 0 auto;
+	}
 }
 
 
@@ -1293,98 +1378,12 @@ dd {
 
 
 
-	.box {
-		display: flex;
-		height: 80px;
-		justify-content: center;
-	}
-
-	.box_ul {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		position: fixed;
-		width: 100%;
-		top: 106px;
-		left: -100%;
-		right: 0;
-		height: 100vh;
-		background-color: white;
-		z-index: 10;
-		transition: left 1s;
-
-	}
-
-	.box_namber_img {
-		display: inline;
-		padding: 3px;
-	}
-
-	.box_li {
-		justify-content: center;
-		display: block;
-		border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
-		z-index: 10;
-
-	}
-
-	.box_a {
-		font-family: SF Pro Text;
-		display: block;
-		color: #000;
-		font-size: 16px;
-		width: 343px;
-		height: 42px;
-	}
-
-	.box_ul_ul {
-		width: 343px;
-		height: 216px;
-		margin: 20px 16px;
-	}
-
-	.box_namber {
-		display: flex;
-		width: 343px;
-		height: 26px;
-		top: 265px;
-		position: relative;
-		margin: 0px 16px;
-		justify-content: space-between;
-	}
-
-	.box_logo_img {
-		display: flex;
-		gap: 10px;
-		height: 24px;
-		position: absolute;
-		right: 15px;
-		top: 60px;
-	}
-
-	.box_img {
-		display: block;
-		width: 24px;
-		height: 24px;
-	}
-
-	.mobile_btn {
-		display: block;
-		width: 24px;
-		height: 24px;
-		position: absolute;
-		left: 20px;
-		top: 60px;
-		position: absolute;
-		cursor: pointer;
-		z-index: 10;
-	}
 
 
-	.active {
-		left: 0;
-		display: block;
-	}
+
+
+
+
 
 
 
@@ -1433,12 +1432,18 @@ dd {
 		display: none;
 	}
 
-
+	.block_2 {
+		display: block;
+	}
 
 	.filter_button_3 {
 		display: block;
 
 	}
+
+
+
+
 
 	.filter {
 		display: none;
@@ -1791,6 +1796,12 @@ dd {
 	}
 
 
+	.text_h3 {
+
+		font-size: 16px;
+
+
+	}
 
 	.history_carts {
 
