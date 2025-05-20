@@ -47,7 +47,7 @@ dd {
 }
 
 .body_container {
-
+	padding: 0px 20px;
 	margin: 0 auto;
 	max-width: 1245px;
 }
@@ -234,7 +234,7 @@ dd {
 	display: grid;
 	gap: 30px;
 	grid-template-columns: 1fr 1fr 1fr;
-	border: 1px solid #c4cdd5;
+
 
 
 
@@ -538,7 +538,7 @@ dd {
 }
 
 .product_cards {
-	border: 1px solid #c4cdd5;
+
 	justify-content: center;
 	width: 100%;
 }
@@ -817,7 +817,7 @@ dd {
 
 	display: grid;
 	grid-row: 1;
-	border: 1px solid #c4cdd5;
+
 }
 
 .footer_ul_a {
@@ -879,8 +879,14 @@ dd {
 		float: left;
 	}
 
+	.body_container {
+		padding: 0px 15px;
+
+
+	}
+
 	.product_cards {
-		border: 1px solid #c4cdd5;
+
 		justify-content: center;
 
 	}
@@ -889,7 +895,7 @@ dd {
 		display: grid;
 		gap: 10px;
 		grid-template-columns: 1fr 1fr;
-		border: 1px solid #c4cdd5;
+
 
 
 	}
@@ -898,7 +904,7 @@ dd {
 		justify-content: center;
 		display: block;
 		width: 100%;
-		/* border-bottom: 1px solid grey; */
+
 	}
 
 	.header_container {
@@ -1110,7 +1116,7 @@ dd {
 
 	.li_text_mobile {
 		display: inline;
-		width: 171px;
+
 		height: 26px;
 		padding: 5px 0px;
 	}
@@ -1261,7 +1267,7 @@ dd {
 		display: grid;
 		gap: 20px;
 		grid-template-columns: 1fr 1fr;
-		border: 1px solid #c4cdd5;
+
 
 
 	}
@@ -1358,7 +1364,7 @@ dd {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
 
 
@@ -1377,20 +1383,9 @@ dd {
 		margin: 0 auto;
 	}
 
-
-
-
-
-
-
-
-
-
-
-
 	.body_container {
-		margin: 0 auto;
 
+		padding: 0px 10px;
 	}
 
 	.header_container {
@@ -1453,7 +1448,6 @@ dd {
 	.product_cards {
 
 		display: block;
-		border: 1px solid #c4cdd5;
 		margin-top: 5px;
 
 
@@ -1474,17 +1468,16 @@ dd {
 	}
 
 	.filter_block {
+		width: 350px;
 		display: block;
-
-
 		justify-content: center;
-		margin: 0;
+		margin: 0 auto;
 		position: relative;
 	}
 
 	.filter_product_cards {
 		display: block;
-		border: 1px solid #c4cdd5;
+
 
 
 
@@ -1742,7 +1735,7 @@ dd {
 
 	.li_text_mobile {
 		display: inline;
-		width: 171px;
+
 		height: 26px;
 		padding: 5px 0px;
 	}
@@ -1804,12 +1797,7 @@ dd {
 
 	}
 
-	.history_carts {
 
-
-
-		border: 1px solid #c4cdd5;
-	}
 
 	.box_img {
 		width: 24px;
