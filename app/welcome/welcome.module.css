@@ -934,7 +934,7 @@ dd {
 		top: 130px;
 		left: -100%;
 		right: 0;
-		height: 100vh;
+		min-height: 100vh;
 		background-color: white;
 		z-index: 10;
 		transition: left 1s;
@@ -978,13 +978,14 @@ dd {
 	}
 
 	.box_namber {
+		/* max-width: 375px; */
 		display: grid;
 		height: 26px;
 		top: 285px;
 		position: relative;
 		margin: 0px 16px;
 		grid-template-columns: 1fr 1fr;
-		place-items: center center;
+		/* place-items: center center; */
 
 	}
 
