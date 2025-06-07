@@ -50,7 +50,7 @@ const Container = () => {
                     <div className={s.filter}></div>
                     <div className={s.filter_product} >
                         <div className={s.filter_product_cards}>
-                            {/* <ProductList /> */}
+                            <ProductList />
                         </div>
                         <div className={s.paginator_filter}>
                             <a href='#'>&lt;</a>
