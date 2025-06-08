@@ -1,6 +1,6 @@
 import React from 'react'
 import s from 'app/welcome/welcome.module.css'
-import ProductList from '~/ProductСart/ProductList'
+import ProductList from '~/Product/ProductList'
 const ViewHistory = () => {
     return (
         <div className={s.viewing_history}>
@@ -10,10 +10,10 @@ const ViewHistory = () => {
                 </div>
             </div>
             <div className={s.viewing_history_carts}>
-           
-                    <ProductList />
 
-                
+                <ProductList />
+
+
             </div>
         </div>
     )

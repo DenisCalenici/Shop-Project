@@ -230,10 +230,9 @@ dd {
 
 .filter_castle_img {
 	box-sizing: border-box;
-
 	position: relative;
-	width: 150px;
-	height: 150px;
+	width: 250px;
+	height: 250px;
 	object-fit: contain;
 }
 
@@ -699,19 +698,17 @@ dd {
 
 
 .viewing_block_history_carts {
-	height: 200px;
-	overflow: auto;
 
+	overflow: auto;
 	scroll-snap-align: start;
 }
 
 .viewing_history_carts {
+	height: 400px;
 	width: 100%;
-	display: inline-grid;
-
+	display: flex;
 	gap: 20px;
 	overflow: auto;
-
 	scroll-snap-align: start;
 }
 
