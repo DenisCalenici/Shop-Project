@@ -3,11 +3,12 @@ import React from 'react';
 import s from '../welcome/welcome.module.css'
 import type { IProductCard } from "~/Product/ProductCard.type"
 
+
 interface ProductProps {
     product: IProductCard
 }
 const ProductCard = ({ product }: ProductProps) => {
-
+    console.log({ product })
 
     return (
         <div className={s.product_cards} key={product.id} >
@@ -30,7 +31,7 @@ const ProductCard = ({ product }: ProductProps) => {
             {/* <p>{product.description}</p> */}
         </div>
 
-       
+
 
 
     );

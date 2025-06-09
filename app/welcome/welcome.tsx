@@ -10,6 +10,7 @@ import UlContainer from './UlContainer/UlContainer'
 export function Welcome() {
 
 	return (
+		
 		<div className={s.body}>
 			<Header />
 			<Container />

@@ -1,9 +1,38 @@
 import React, { useState, useEffect } from 'react'
 import s from '../welcome/welcome.module.css'
 import ProductList from './ProductList'
+import type { IProductCard } from './ProductCard.type'
+
 
 const Product = () => {
+    const [products, setProducts] = useState<IProductCard[] | null>(null);
+    const [loading, setLoading] = useState<boolean>(true);
+    const [error, setError] = useState<string | null>(null);
+    useEffect(() => {
 
+        fetch('https://fakestoreapi.com/products')
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error(`Ошибка при загрузке данных: ${response.status}`)
+                }
+                return response.json()
+            })
+            .then((data: IProductCard[]) => {
+                setProducts(data)
+                setLoading(false)
+            })
+            .catch((err: any) => {
+                setError(err.message)
+                setLoading(false)
+            })
+    }, [])
+    if (loading) {
+        return <div>Загрузка...</div>;
+    }
+
+    if (error) {
+        return <div>Ошибка: {error}</div>;
+    }
     return (
         <div>   <div className={s.catalog}>
             <div className={s.block}>
@@ -31,7 +60,7 @@ const Product = () => {
                 <div className={s.filter}></div>
                 <div className={s.filter_product} >
                     <div className={s.filter_product_cards}>
-                        <ProductList />
+                        <ProductList products={products || []} />
                     </div>
                     <div className={s.paginator_filter}>
                         <a href='#'>&lt;</a>
