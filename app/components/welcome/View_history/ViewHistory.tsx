@@ -1,7 +1,7 @@
 
-import s from 'app/welcome/welcome.module.css'
-import ProductList from '~/Product/ProductList'
-import type { IProductCard } from '~/Product/ProductCard.type'
+import s from 'app/components/welcome/welcome.module.css'
+import ProductList from '~/components/Product/ProductList'
+import type { IProductCard } from '~/components/Product/ProductCard.type'
 
 interface ViewHistoryProps {
     products?: IProductCard[];

@@ -1,5 +1,5 @@
-import React from 'react'
-import s from 'app/welcome/welcome.module.css'
+
+import s from 'app/components/welcome/welcome.module.css'
 const Footer = () => {
     return (
         <div> <div className={s.footer_body}>

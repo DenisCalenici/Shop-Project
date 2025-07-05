@@ -36,9 +36,11 @@ const Product = () => {
     return (
         <div>   <div className={s.catalog}>
             <div className={s.block}>
-                <button className={s.filter_button_1}>
-                    Сбросить фильтры
-                </button>
+            
+                    <button className={s.filter_button_1}>
+                        Сбросить фильтры
+                    </button>
+               
                 <button className={s.filter_button_2}>
                     <p className={s.filter_p_2}> Популярности</p> <div className={s.filter_img_2}>	<img
                         src="app/img/Vector_2.png"

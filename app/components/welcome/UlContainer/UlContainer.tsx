@@ -1,5 +1,5 @@
-import React from 'react'
-import s from 'app/welcome/welcome.module.css'
+
+import s from '../welcome.module.css'
 const UlContainer = () => {
     return (
         <div className={s.ul_container} >

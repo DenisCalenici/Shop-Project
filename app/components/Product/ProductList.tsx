@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+
 import ProductCard from './ProductCard';
 import type { IProductCard } from './ProductCard.type';
 interface ProductListProps {

@@ -1,9 +1,9 @@
 import React from 'react'
-import s from 'app/welcome/welcome.module.css'
-import ProductList from '~/Product/ProductList'
+import s from 'app/components/welcome/welcome.module.css'
+import ProductList from '~/components/Product/ProductList'
 import ViewHistory from '../View_history/ViewHistory'
 import CeoProduct from '../Ceo_product/CeoProduct'
-import Product from '~/Product/Product'
+import Product from '~/components/Product/Product'
 const Container = () => {
     return (
         <div className={s.body_container}>

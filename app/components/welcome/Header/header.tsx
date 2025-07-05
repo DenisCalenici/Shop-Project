@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import s from 'app/welcome/welcome.module.css'
+import s from 'app/components/welcome/welcome.module.css'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+
 const Header = () => {
     const [nav, setNav] = useState(false)
     return (
@@ -19,7 +20,8 @@ const Header = () => {
                         <img src="./app/img/Logo (1).svg" alt="Логотип" />
                     </div>
                     <div className={s.header_ul}>
-                        <a href="#" className={s.header_a}>Главная</a>
+                       
+                            <a href="#" className={s.header_a}>Главная</a>
                         <a href="#" className={s.header_a}>Каталог</a>
                         <a href="#" className={s.header_a}>Оптовая продажа</a>
                         <a href="#" className={s.header_a}>О нас</a>
