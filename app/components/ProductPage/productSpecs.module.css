@@ -1,0 +1,29 @@
+.description_button {}
+
+.container_description {
+    margin: 0px 20px;
+    margin: 0 auto;
+    max-width: 1240px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.description_1 {
+    width: 605px;
+    height: 370px;
+    opacity: 1;
+    gap: 20px;
+}
+
+.description_2 {
+    width: 605px;
+    height: 290px;
+    opacity: 1;
+    gap: 20px;
+}
+
+.container_button {
+    margin: 0px 20px;
+    margin: 0 auto;
+    max-width: 1240px;
+}

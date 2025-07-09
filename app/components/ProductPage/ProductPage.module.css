@@ -3,18 +3,38 @@
 }
 
 .product_page_container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: 0px 20px;
     margin: 0 auto;
     max-width: 1245px;
 }
 
 .product_image {
+    align-self: center;
+    align-items: center;
     max-width: 605px;
     max-height: 513px;
+
+
+
 }
 
-.product_color {}
+.image_nev {
+    max-width: 604px;
+}
+
+.product_image_nev {
+    max-width: 142px;
+}
+
+.product_color {
+    font-family: SF Pro Text;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+}
 
 .p_color_1 {
     width: 20px;
@@ -40,7 +60,194 @@
     margin: 5px;
 }
 
+.installation {
+    max-width: 340px;
+    margin: 20px 10px;
+    display: block;
+    opacity: 1;
+
+}
+
+.wooden_door {
+    display: inline;
+    font-family: SF Pro Text;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 20px 10px;
+    line-height: 24px;
+    letter-spacing: 0%;
+
+}
+
+.rating {
+    font-family: SF Pro Text;
+    font-weight: 400;
+    font-size: 14px;
+
+    line-height: 21px;
+    letter-spacing: 5%;
+    vertical-align: middle;
+    width: 71;
+    height: 21;
+    top: 212px;
+    left: 735px;
+
+    opacity: 1;
+}
+
+.title_name {
+    font-family: SF Pro Text;
+    font-weight: 600;
+    font-size: 24px;
+
+    line-height: 30px;
+    letter-spacing: 0%;
+
+}
+
+.interior_door {
+    display: inline;
+    font-family: SF Pro Text;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 20px 10px;
+    line-height: 24px;
+    letter-spacing: 0%;
+
+}
+
 .product_filter {
     display: flex;
     gap: 10px;
+    padding: 10px 0px;
+}
+
+.purchase_button {
+
+    width: 288px;
+    height: 50px;
+    opacity: 1;
+    background: #4295E4;
+    font-family: SF Pro Display;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    border: none;
+    color: white;
+
+}
+
+.price {
+    font-family: SF Pro Text;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    padding: 10px 0px;
+}
+
+.like_button {
+    width: 116px;
+    height: 24px;
+    opacity: 1;
+    font-family: SF Pro Text;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    border: none;
+    color: #4D4D4D;
+    background: white;
+    margin: 0px 20px;
+    padding: 0;
+    display: inline;
+
+
+}
+
+.product_complection {
+    font-family: SF Pro Text;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+
+}
+
+.product_complection_button {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    opacity: 0.1;
+    width: 288px;
+    height: 40px;
+    border-width: 1px;
+    opacity: 1;
+    align-items: center;
+    border: 3px solid transparent;
+    border-color: rgba(0, 0, 0, 0.1);
+
+}
+
+.like_img {
+    height: 16px;
+    display: inline;
+}
+
+.like_p {
+    padding: 5px;
+    position: relative;
+    top: -3px;
+    display: inline;
+    height: 24px;
+}
+
+.button_add {}
+
+.payment {
+    display: flex;
+    width: 597px;
+    height: 58px;
+    padding: 16px;
+    gap: 12px;
+    border: none;
+    background: white;
+    justify-content: space-between;
+    font-family: SF Pro Text;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0%;
+}
+
+.installation_and_delivery {
+    display: flex;
+    width: 597px;
+    height: 58px;
+    padding: 16px;
+    gap: 12px;
+    border: none;
+    background: white;
+    justify-content: space-between;
+    font-family: SF Pro Text;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0%;
+}
+
+.guarantee_and_benefit {
+    display: flex;
+    width: 597px;
+    height: 58px;
+    padding: 16px;
+    gap: 12px;
+    border: none;
+    background: white;
+    justify-content: space-between;
+    font-family: SF Pro Text;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0%;
 }

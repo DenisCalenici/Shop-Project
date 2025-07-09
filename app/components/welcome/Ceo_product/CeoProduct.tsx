@@ -1,5 +1,5 @@
 import React from 'react'
-import s from 'app/components/welcome/welcome.module.css'
+import s from '../welcome.module.css'
 
 const CeoProduct = () => {
     return (<div>
