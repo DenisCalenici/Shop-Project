@@ -1,9 +1,16 @@
-import { useState } from 'react'
-import s from 'app/components/welcome/welcome.module.css'
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+import { useState } from 'react';
+import s from '../welcome.module.css';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import Basket from '../Basket/basket';
 
 const Header = () => {
-    const [nav, setNav] = useState(false)
+    const [nav, setNav] = useState(false);
+    const [basketOpen, setBasketOpen] = useState(false);
+
+    const toggleBasket = () => {
+        setBasketOpen(prevState => !prevState);
+    };
+
     return (
         <div className={s.header}>
             <div className={s.header_advertisement_container}>
@@ -20,8 +27,8 @@ const Header = () => {
                         <img src="./app/img/Logo (1).svg" alt="Логотип" />
                     </div>
                     <div className={s.header_ul}>
-                       
-                            <a href="#" className={s.header_a}>Главная</a>
+
+                        <a href="#" className={s.header_a}>Главная</a>
                         <a href="#" className={s.header_a}>Каталог</a>
                         <a href="#" className={s.header_a}>Оптовая продажа</a>
                         <a href="#" className={s.header_a}>О нас</a>
@@ -30,7 +37,14 @@ const Header = () => {
                         <a href="#" className={s.header_contacts_a}>+7 (966) 55 88 499</a>
                         <div className={s.header_contacts_img}>
                             <img className={s.img_icons_header} src="app/img/Vector.png" alt="Иконка 1" />
-                            <img className={s.img_icons_header} src="app/img/Frame.png" alt="Иконка 2" />
+                            <img className={s.img_icons_header} src="app/img/Frame.png" alt="Иконка 2" onClick={toggleBasket} />
+
+                            {basketOpen && (
+                                <Basket
+                                    isOpen={basketOpen}
+                                    onClose={toggleBasket}
+                                />
+                            )}
                         </div>
                     </div>
                 </div>
@@ -88,3 +102,5 @@ const Header = () => {
     )
 }
 export default Header
+
+

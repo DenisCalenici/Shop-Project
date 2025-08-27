@@ -21,20 +21,13 @@ const productSpecs = () => {
         <div className={s.container_button}>
             <div className={s.description_button} >
                 <button onClick={description} className={s.description_button_1}>Характеристики</button>
-                {isDescription && (<Description />)}
                 <button onClick={reviews} className={s.description_button_2}>Описание</button>
-                {isReviews && (<Reviews />)}
                 <button onClick={specifications} className={s.description_button_3}>Отзывы</button>
+                {isDescription && (<Description />)}
+                {isReviews && (<Reviews />)}
                 {isSpecifications && (<Specifications />)}
             </div>
-            <div className={s.description_information}>
-                <div></div>
 
-                <div>2</div>
-
-
-
-            </div>
         </div>
     )
 }

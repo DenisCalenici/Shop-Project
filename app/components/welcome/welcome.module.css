@@ -10,6 +10,7 @@ p {
 }
 
 a {
+
 	text-decoration: none;
 	color: #000;
 }
@@ -461,9 +462,9 @@ dd {
 .product_cards {
 	justify-content: center;
 	width: 100%;
-	border: '1px solid #ccc';
-	padding: '10px';
-	margin: '10px';
+
+	padding: 10px;
+
 }
 
 .paginator_filter_mobile {
@@ -755,6 +756,64 @@ dd {
 
 .mobile_btn {
 	display: none;
+}
+
+.basketOpen {
+	position: absolute;
+	top: 120px;
+	left: 337px;
+	width: 836px;
+	height: 717px;
+	background: #989898;
+	z-index: 2;
+}
+
+.basket_container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+
+
+}
+
+.header_basketOpen {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 15px;
+
+}
+
+.basket_title {
+	font-family: SF Pro Display;
+	font-weight: 500;
+	font-size: 20px;
+	width: 78px;
+	height: 34px;
+
+	line-height: 34px;
+	letter-spacing: 0%;
+	vertical-align: middle;
+
+}
+
+.basket_button {
+	width: 20px;
+	height: 20px;
+	position: relative;
+	top: -10px;
+	place-items: top;
+	place-self: end;
+
+}
+
+.basket_img {
+	position: relative;
+	top: -1px;
+	right: 5px;
+
 }
 
 @media (max-width: 1025px) {
@@ -1360,4 +1419,6 @@ dd {
 	.header_burger {
 		display: block;
 	}
+
+
 }
