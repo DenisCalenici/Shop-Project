@@ -1,6 +1,5 @@
-import React from 'react'
+
 import s from 'app/components/welcome/welcome.module.css'
-import ProductList from '~/components/Product/ProductList'
 import ViewHistory from '../View_history/ViewHistory'
 import CeoProduct from '../Ceo_product/CeoProduct'
 import Product from '~/components/Product/Product'

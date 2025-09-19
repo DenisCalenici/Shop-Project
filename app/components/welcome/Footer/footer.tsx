@@ -1,5 +1,7 @@
 
 import s from 'app/components/welcome/welcome.module.css'
+import logo_5 from '../../../img/Logo_5.png'
+import Frame_2 from '../../../img/Frame_2.png'
 const Footer = () => {
     return (
         <div> <div className={s.footer_body}>
@@ -7,11 +9,11 @@ const Footer = () => {
                 <div className={s.footer_logo}>
                     <img
                         className={s.footer_logo_img}
-                        src="app/img/Logo (5).png"
+                        src={logo_5}
                     />
                     <img
                         className={s.footer_logo_img_2}
-                        src="app/img/Frame 4075216.png"
+                        src={Frame_2}
                     />
                 </div>
                 <div className={s.footer_ul}>

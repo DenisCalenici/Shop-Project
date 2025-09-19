@@ -1,17 +1,17 @@
-import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import { fetchProductById } from './Api';
-import type { IProductCard } from '../Product/ProductCard.type';
-import Layout from '../Layout/Layout';
-import UlContainer from '../welcome/UlContainer/UlContainer';
-import CeoProduct from '../welcome/Ceo_product/CeoProduct';
-import ViewHistory from '../welcome/View_history/ViewHistory';
+import { useParams } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { fetchProductById } from '../../api/product'
+import type { IProductCard } from '../Product/ProductCard.type'
+import Layout from '../Layout/Layout'
+import UlContainer from '../welcome/UlContainer/UlContainer'
+import CeoProduct from '../welcome/Ceo_product/CeoProduct'
+import ViewHistory from '../welcome/View_history/ViewHistory'
 import s from "./ProductPage.module.css"
-import IconColor1 from './imgProductPage/Icon color (1).png';
-import LikeButton from './imgProductPage/Vector.png'
-import offButton from './imgProductPage/off_button.png'
-import onButton from './imgProductPage/open_button.png'
-import Description from './productSpecs';
+import IconColor1 from '../../img/Icon_color(1).png'
+import LikeButton from '../../img/Vector.png'
+import offButton from '../../img/off_button.png'
+import onButton from '../../img/open_button.png'
+import Description from './productSpecs'
 
 const ProductPage = () => {
   const { id } = useParams<{ id: string }>();

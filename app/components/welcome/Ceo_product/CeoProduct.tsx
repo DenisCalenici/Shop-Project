@@ -1,6 +1,7 @@
 import React from 'react'
 import s from '../welcome.module.css'
-
+import white_2 from "../../../img/white-2.png" 
+import white_3 from "../../../img/white-3.png"
 const CeoProduct = () => {
     return (<div>
         <div className={s.ceo_product}>
@@ -42,10 +43,10 @@ const CeoProduct = () => {
                 </div>
             </div>
             <div className={s.product_block}>
-                <img className={s.product_block} src="app/img/white-3.png" />
+                <img className={s.product_block} src={white_3} />
             </div>
             <div className={s.product_block}>
-                <img className={s.product_block} src="app/img/white-2.png" />
+                <img className={s.product_block} src={white_2} />
             </div>
             <div className={s.product_block}>
                 <h3 className={s.ceo_product_h3}>
@@ -71,7 +72,7 @@ const CeoProduct = () => {
             <div className={s.ceo_product_mobile_block}>
                 <div className={s.product_block_mobile}>
                     <div className={s.product_block_mobile}>
-                        <img className={s.product_block_mobile} src="app/img/white-3.png" />
+                        <img className={s.product_block_mobile} src={white_3} />
                     </div>
                     <h3 className={s.ceo_product_h3_mobile}>
                         Eget quis quam metus, scelerisque.
@@ -110,7 +111,7 @@ const CeoProduct = () => {
                     </div>
                 </div>
                 <div className={s.product_block_mobile}>
-                    <img className={s.product_block_mobile} src="app/img/white-2.png" />
+                    <img className={s.product_block_mobile} src={white_2} />
                 </div>
                 <div className={s.product_block_mobile}>
                     <h3 className={s.ceo_product_h3_mobile}>

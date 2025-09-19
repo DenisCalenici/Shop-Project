@@ -23,4 +23,3 @@ const ProductList = ({ products, onProductClick, addToBasket }: ProductListProps
 export default ProductList;
 
 
-

@@ -1,45 +1,14 @@
 import { useParams } from 'react-router-dom';
 import type { IProductCard } from '../Product/ProductCard.type';
 import { useState, useEffect } from 'react';
-import { fetchProductById } from './Api';
+
 const Reviews = () => {
     const { id } = useParams<{ id: string }>();
     const [image, setImage] = useState<IProductCard | null>(null);
     const [product, setProduct] = useState<IProductCard | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
-    // useEffect(() => {
-    //     const loadProduct = async () => {
-    //         if (id) {
-    //             setLoading(true);
-    //             try {
-    //                 const productData = await fetchProductById(Number(id));
-    //                 if (productData) {
-    //                     setProduct(productData);
-    //                 } else {
-    //                     setError('Товар не найден.');
-    //                 }
-    //             } catch {
-    //                 setError('Ошибка при загрузке товара.');
-    //             } finally {
-    //                 setLoading(false);
-    //             }
-    //         }
-    //     };
-    //     loadProduct();
-    // }, [id]);
-
-    // if (loading) {
-    //     return <div>Загрузка...</div>;
-    // }
-
-    // if (error) {
-    //     return <div>{error}</div>;
-    // }
-
-    // if (!product) {
-    //     return <div>Товар не найден.</div>;
-    // }
+  
 
     return (
         <div>

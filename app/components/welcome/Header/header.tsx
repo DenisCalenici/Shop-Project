@@ -1,8 +1,10 @@
-import { useState } from 'react';
-import s from '../welcome.module.css';
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import Basket from '../Basket/basket';
-
+import { useState } from 'react'
+import s from '../welcome.module.css'
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+import Basket from '../Basket/basket'
+import logo_one from '../../../img/Logo_1.svg'
+import Vector from '../../../img/Vector.png'
+import Frame from '../../../img/Frame.png'
 const Header = () => {
     const [nav, setNav] = useState(false);
     const [basketOpen, setBasketOpen] = useState(false);
@@ -24,7 +26,7 @@ const Header = () => {
             <div className={s.header_container_container}>
                 <div className={s.header_container}>
                     <div className={s.header_logo}>
-                        <img src="./app/img/Logo (1).svg" alt="Логотип" />
+                        <img src={logo_one} alt="Логотип" />
                     </div>
                     <div className={s.header_ul}>
 
@@ -36,8 +38,8 @@ const Header = () => {
                     <div className={s.header_contacts}>
                         <a href="#" className={s.header_contacts_a}>+7 (966) 55 88 499</a>
                         <div className={s.header_contacts_img}>
-                            <img className={s.img_icons_header} src="app/img/Vector.png" alt="Иконка 1" />
-                            <img className={s.img_icons_header} src="app/img/Frame.png" alt="Иконка 2" onClick={toggleBasket} />
+                            <img className={s.img_icons_header} src={Vector} alt="Иконка 1" />
+                            <img className={s.img_icons_header} src={Frame} alt="Иконка 2" onClick={toggleBasket} />
 
                             {basketOpen && (
                                 <Basket

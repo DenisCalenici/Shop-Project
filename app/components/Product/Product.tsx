@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import s from '../welcome/welcome.module.css'
 import ProductList from './ProductList'
 import type { IProductCard } from './ProductCard.type'
-
+import arrow from '../../img/Vector_2.png'
 const Product = () => {
     const [products, setProducts] = useState<IProductCard[] | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
@@ -48,11 +48,13 @@ const Product = () => {
         return <div>Загрузка...</div>;
     }
 
+
     if (error) {
         return <div>Ошибка: {error}</div>;
     }
 
     return (
+
         <div className={s.catalog}>
             <div className={s.block}>
                 <button className={s.filter_button_1} onClick={handleResetFilters}>
@@ -61,7 +63,7 @@ const Product = () => {
                 <button className={s.filter_button_2} onClick={handleSortByPopularity}>
                     <p className={s.filter_p_2}>Популярности</p>
                     <div className={s.filter_img_2}>
-                        <img src="/img/Vector_2.png" alt="Стрелка" />
+                        <img src={arrow} alt="Стрелка" />
                     </div>
                 </button>
             </div>
@@ -74,7 +76,7 @@ const Product = () => {
                 <button className={s.filter_button_4} onClick={handleSortByPopularity}>
                     <p className={s.filter_p_4}>Популярности</p>
                     <div className={s.filter_img_4}>
-                        <img src="/img/Vector_2.png" alt="Стрелка" />
+                        <img src={arrow} alt="Стрелка" />
                     </div>
                 </button>
             </div>
