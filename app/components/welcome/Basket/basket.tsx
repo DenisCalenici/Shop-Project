@@ -9,7 +9,7 @@ interface BasketProps {
 }
 
 const Basket: React.FC<BasketProps> = ({ isOpen, onClose }) => {
-    const { cartItems, removeFromCart, updateQuantity, getTotalPrice } = useCart(); // Добавили хук
+    const { cartItems, removeFromCart, updateQuantity, getTotalPrice } = useCart();
 
     return isOpen ? (
         <div className={s.basket_container}>
@@ -57,7 +57,7 @@ const Basket: React.FC<BasketProps> = ({ isOpen, onClose }) => {
                         ))
                     )}
                     {cartItems.length > 0 && (
-                        <div className={s.price_total}><h3>Итого: ${getTotalPrice().toFixed(2)}</h3>
+                        <div className={s.price_total}><h3 className={s.price_total}>Итого: ${getTotalPrice().toFixed(2)}</h3>
                             <div className={s.cart_total}><button className={s.checkout_btn}>Оформить заказ</button>
                                 <button className={s.cart_return_btn} onClick={onClose}>
                                     Продолжить покупки

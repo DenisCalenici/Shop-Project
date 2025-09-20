@@ -761,9 +761,10 @@ dd {
 
 .basketOpen {
 	position: absolute;
-	top: 120px;
-	left: 337px;
-	width: 836px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 836px;
 	height: 717px;
 	background: white;
 	opacity: 1;
@@ -1141,7 +1142,7 @@ dd {
 	}
 
 	.ceo_product_mobile {
-		/* display: grid; */
+
 		display: block;
 		padding: 10px;
 	}
@@ -1479,6 +1480,17 @@ dd {
 
 }
 
+.basketOpen {
+	position: absolute;
+	/* top: 25%;
+	left: 15%;
+	width: 65%; */
+	height: 717px;
+	background: white;
+	opacity: 1;
+	z-index: 1000;
+}
+
 
 @media (max-width: 825px) {
 	.filter_button_1 {
@@ -1748,6 +1760,17 @@ dd {
 		right: 5px;
 
 	}
+
+	.basketOpen {
+		position: absolute;
+		/* top: 25%;
+		left: 25%; */
+		/* width: 436px; */
+		height: 717px;
+		background: white;
+		opacity: 1;
+		z-index: 1000;
+	}
 }
 
 @media (max-width: 768px) {
@@ -1995,15 +2018,16 @@ dd {
 	/*карзина*/
 	.cart_item {
 
+		height: 152px;
 		padding: 15px;
 		gap: 15px;
 		display: grid;
-		grid-template-columns: 136px 1fr 1fr;
+		grid-template-columns: 0.5fr 1.5fr 1fr;
 	}
 
 	.cart_item_image {
-		width: 136px;
-		height: 120px;
+		width: 70px;
+		height: 68px;
 		opacity: 1;
 		mix-blend-mode: Darken;
 
@@ -2011,8 +2035,8 @@ dd {
 
 	.cart_price {
 		display: grid;
-		height: 50px;
-
+		height: 68px;
+		place-content: end;
 
 	}
 
@@ -2031,16 +2055,16 @@ dd {
 	.cart_name {
 		text-align: start;
 		font-family: SF Pro Text;
-		font-weight: 400;
-		font-size: 16px;
-		line-height: 26px;
+		font-weight: 200;
+		font-size: 10px;
+		line-height: 20px;
 
 
 	}
 
 	.cart_item_info {
 		display: grid;
-		grid-template-rows: repeat(2, 1fr)
+		grid-template-rows: repeat(1, 1fr)
 	}
 
 	.cart_item_title {
@@ -2061,10 +2085,12 @@ dd {
 
 	.cart_item_controls {
 		display: flex;
-		align-items: center;
+		align-items: butt;
 		gap: 10px;
-		padding: 73px 0px;
+		padding-top: 6.8px;
 	}
+
+	.price_total {}
 
 	.quantity_btn {
 		width: 30px;
@@ -2082,7 +2108,7 @@ dd {
 	}
 
 	.cart_delete_btn {
-		width: 97px;
+		/* width: 97px;
 		height: 26px;
 		border: none;
 		gap: 12px;
@@ -2091,9 +2117,9 @@ dd {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		top: 20px;
+		top: 20px; */
 
-
+		display: none;
 	}
 
 	.cart_delete_img {
@@ -2190,9 +2216,9 @@ dd {
 
 	.basketOpen {
 		position: absolute;
-		top: 120px;
-		left: 337px;
-		width: 343px;
+		/* top: 25%;
+		left: 25%; */
+		max-width: 343px;
 		height: 710px;
 		background: white;
 		opacity: 1;
