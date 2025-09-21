@@ -65,14 +65,24 @@ const Basket: React.FC<BasketProps> = ({ isOpen, onClose }) => {
 
                         </div>
                     )}
+                    {cartItems.length > 0 && (<div><h3 className={s.mobile_price_total}>Итого: <div>${getTotalPrice().toFixed(2)}</div></h3>
+                    </div>
+                    )}
                 </div>
-
-
 
                 <div className={s.additional_product}>
                     <p className={s.related_product}>С этим покупают</p>
                 </div>
+                {cartItems.length > 0 && (
+                    <div className={s.mobile_price_total}>
+                        <div className={s.mobile_cart_total}><button className={s.mobile_checkout_btn}>Оформить заказ</button>
+                            <button className={s.mobile_cart_return_btn} onClick={onClose}>
+                                Продолжить покупки
+                            </button></div>
+
+                    </div>)}
             </div>
+
         </div>
     ) : null;
 };
