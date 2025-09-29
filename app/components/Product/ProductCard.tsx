@@ -38,7 +38,7 @@ const ProductCard = ({ product, onProductClick }: ProductProps) => {
                     <p className={s.filter_castle_availability_p}>Нет в наличии </p>
 
                     <button
-                        onClick={handleAddToBasket} // Оставили как было
+                        onClick={handleAddToBasket} 
                         className={s.filter_castle_button_2}
                     >
                         SALE

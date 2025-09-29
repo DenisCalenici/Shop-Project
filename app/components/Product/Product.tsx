@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import s from '../welcome/welcome.module.css'
 import ProductList from './ProductList'
 import type { IProductCard } from './ProductCard.type'

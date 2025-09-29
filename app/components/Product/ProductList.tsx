@@ -11,7 +11,7 @@ const ProductList = ({ products, onProductClick, addToBasket }: ProductListProps
     return (
         <>
             {products && products.map((product) => (
-                <ProductCard key={product.id} addToBasket={addToBasket} product={product} onProductClick={onProductClick} />
+                <ProductCard key={product.id}  product={product} onProductClick={onProductClick} />
             ))}
         </>
     );

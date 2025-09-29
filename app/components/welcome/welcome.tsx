@@ -1,5 +1,5 @@
 
-import s from './welcome.module.css'
+
 import Container from './BodyContainer/Container'
 import UlContainer from './UlContainer/UlContainer'
 import Layout from '../Layout/Layout'

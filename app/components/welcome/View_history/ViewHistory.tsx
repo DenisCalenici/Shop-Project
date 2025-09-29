@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import s from '../welcome.module.css';
 import ProductList from '~/components/Product/ProductList';
 import type { IProductCard } from '~/components/Product/ProductCard.type';
-const khljb = [{
+const temporaryСards = [{
     "id": 1,
     "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
     "price": 109.95,
@@ -27,8 +27,8 @@ const khljb = [{
     }
 }]
 const ViewHistory = () => {
-    //дать название в конце + data
-    const [viewHistory, setViewHistory] = useState<IProductCard[]>(khljb);
+
+    const [viewHistory, setViewHistory] = useState<IProductCard[]>(temporaryСards);
 
     const addToHistory = (product: IProductCard) => {
         if (!viewHistory.some(p => p.id === product.id)) {
@@ -38,35 +38,6 @@ const ViewHistory = () => {
         }
     };
     console.log(viewHistory)
-    // useEffect(() => {
-    //     try {
-    //localStorage.setItem('viewHistory', JSON.stringify(viewHistory));
-    //     } catch (error) {
-    //         console.error('Ошибка при сохранении истории просмотров', error);
-    //     }
-    // }, [viewHistory]);
-
-    // useEffect(() => {
-    //     const savedHistory = localStorage.getItem('viewHistory');
-    //     if (savedHistory) {
-    //         try {
-    //             const parsedHistory = JSON.parse(savedHistory);
-    //             if (
-    //                 Array.isArray(parsedHistory) &&
-    //                 parsedHistory.every(
-    //                     (item: any) =>
-    //                         typeof item.id === 'number' &&
-    //                         typeof item.title === 'string' &&
-    //                         typeof item.image === 'string'
-    //                 )
-    //             ) {
-    //                 setViewHistory(parsedHistory);
-    //             }
-    //         } catch (error) {
-    //             console.error('Ошибка при загрузке истории просмотров', error);
-    //         }
-    //     }
-    // }, []);
 
     return (
         <div className={s.viewing_history}>
