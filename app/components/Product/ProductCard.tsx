@@ -9,7 +9,7 @@ interface ProductProps {
 }
 
 const ProductCard = ({ product, onProductClick }: ProductProps) => {
-    const { addToCart } = useCart(); // Добавили только эту строку
+    const { addToCart } = useCart(); 
 
     const handleClick = () => {
         if (onProductClick) {
@@ -18,17 +18,17 @@ const ProductCard = ({ product, onProductClick }: ProductProps) => {
     };
 
     const handleAddToBasket = (e: React.MouseEvent) => {
-        e.stopPropagation(); // Останавливаем всплытие события
-        e.preventDefault(); // Предотвращаем переход по ссылке
-        addToCart(product); // Добавили только эту строку
+        e.stopPropagation(); 
+        e.preventDefault();
+        addToCart(product); 
     };
 
     if (!product || !product.id || !product.title || !product.image) {
         console.error('ProductCard: Некорректные данные продукта');
-        return null;
+        return null; // ВОЗВРАЩАЕМ null ВМЕСТО void
     }
-
-    return (
+    
+    return ( // ДОБАВИЛИ return
         <div className={s.product_cards} key={product.id}>
             <Link to={`/product/${product.id}`} onClick={handleClick} className={s.product_link}>
                 <div className={s.filter_castle}>
@@ -57,7 +57,7 @@ const ProductCard = ({ product, onProductClick }: ProductProps) => {
                 <p className={s.price_current_price} >Цена: ${product.price}</p>
             </Link>
         </div>
-    );
-};
+    ); // ЗАКРЫЛИ return
+}; // ЗАКРЫЛИ ФУНКЦИЮ
 
 export default ProductCard;

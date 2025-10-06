@@ -1,6 +1,5 @@
-
 import type { ReactNode } from 'react';
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import type { IProductCard } from '~/components/Product/ProductCard.type';
 
 interface CartItem extends IProductCard {
@@ -14,6 +13,8 @@ interface CartContextType {
     updateQuantity: (productId: number, quantity: number) => void;
     getTotalPrice: () => number;
     getTotalItems: () => number;
+    // ДОБАВИЛИ НОВОЕ СОСТОЯНИЕ ДЛЯ СЧЕТЧИКА В ХЕДЕРЕ
+    headerCartCount: number;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -32,6 +33,26 @@ interface CartProviderProps {
 
 export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     const [cartItems, setCartItems] = useState<CartItem[]>([]);
+    // ДОБАВИЛИ ОТДЕЛЬНОЕ СОСТОЯНИЕ ДЛЯ СЧЕТЧИКА В ХЕДЕРЕ
+    const [headerCartCount, setHeaderCartCount] = useState<number>(0);
+
+    // ДОБАВИЛИ useEffect ДЛЯ СИНХРОНИЗАЦИИ С LOCALSTORAGE
+    useEffect(() => {
+        const savedCount = localStorage.getItem('headerCartCount');
+        if (savedCount) {
+            setHeaderCartCount(parseInt(savedCount));
+        }
+    }, []);
+
+    // ДОБАВИЛИ useEffect ДЛЯ СОХРАНЕНИЯ В LOCALSTORAGE
+    useEffect(() => {
+        localStorage.setItem('headerCartCount', headerCartCount.toString());
+        
+        // ОТПРАВЛЯЕМ СОБЫТИЕ ДЛЯ ОБНОВЛЕНИЯ ВСЕХ СЧЕТЧИКОВ
+        window.dispatchEvent(new CustomEvent('cartCountUpdated', {
+            detail: { count: headerCartCount }
+        }));
+    }, [headerCartCount]);
 
     const addToCart = (product: IProductCard) => {
         setCartItems(prevItems => {
@@ -47,10 +68,20 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
 
             return [...prevItems, { ...product, quantity: 1 }];
         });
+        
+        // ДОБАВИЛИ УВЕЛИЧЕНИЕ СЧЕТЧИКА ДЛЯ ХЕДЕРА
+        setHeaderCartCount(prev => prev + 1);
     };
 
     const removeFromCart = (productId: number) => {
-        setCartItems(prevItems => prevItems.filter(item => item.id !== productId));
+        setCartItems(prevItems => {
+            const itemToRemove = prevItems.find(item => item.id === productId);
+            if (itemToRemove) {
+                // УМЕНЬШАЕМ СЧЕТЧИК НА КОЛИЧЕСТВО УДАЛЯЕМОГО ТОВАРА
+                setHeaderCartCount(prev => Math.max(0, prev - itemToRemove.quantity));
+            }
+            return prevItems.filter(item => item.id !== productId);
+        });
     };
 
     const updateQuantity = (productId: number, quantity: number) => {
@@ -59,11 +90,20 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
             return;
         }
 
-        setCartItems(prevItems =>
-            prevItems.map(item =>
+        setCartItems(prevItems => {
+            const oldItem = prevItems.find(item => item.id === productId);
+            const newItems = prevItems.map(item =>
                 item.id === productId ? { ...item, quantity } : item
-            )
-        );
+            );
+            
+            // ОБНОВЛЯЕМ СЧЕТЧИК ПРИ ИЗМЕНЕНИИ КОЛИЧЕСТВА
+            if (oldItem) {
+                const quantityDiff = quantity - oldItem.quantity;
+                setHeaderCartCount(prev => Math.max(0, prev + quantityDiff));
+            }
+            
+            return newItems;
+        });
     };
 
     const getTotalPrice = () => {
@@ -80,7 +120,9 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
         removeFromCart,
         updateQuantity,
         getTotalPrice,
-        getTotalItems
+        getTotalItems,
+        // ДОБАВИЛИ НОВОЕ СВОЙСТВО
+        headerCartCount
     };
 
     return (

@@ -1,3 +1,4 @@
+// Header.tsx
 import { useState } from 'react'
 import s from '../welcome.module.css'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
@@ -5,8 +6,10 @@ import Basket from '../Basket/basket'
 import logo_one from '../../../img/Logo_1.svg'
 import Vector from '../../../img/Vector.png'
 import Frame from '../../../img/Frame.png'
+// ИМПОРТИРУЕМ КОМПОНЕНТ СЧЕТЧИКА (убедись что путь правильный)
+import CartCounter from '../Counter/CartCounter'
 
-const Header = () => {
+const Header = () => { // УБРАЛИ HeaderProps и cartCount
     const [nav, setNav] = useState(false);
     const [basketOpen, setBasketOpen] = useState(false);
 
@@ -39,19 +42,23 @@ const Header = () => {
                     <div className={s.header_contacts}>
                         <a href="#" className={s.header_contacts_a}>+7 (966) 55 88 499</a>
                         <div className={s.header_contacts_img}>
-                            <img className={s.img_icons_header} src={Vector} alt="Иконка 1" />
-                            <img
-                                className={s.img_icons_header}
-                                src={Frame}
-                                alt="Иконка 2"
-                                onClick={toggleBasket}
-
-                            />
-                        </div>
+    {/* Иконка 1 */}
+    <img className={s.img_icons_header} src={Vector} alt="Иконка 1" />
+    
+    {/* Иконка корзины с оберткой */}
+    <div className={s.cartIconWrapper}>
+        <img
+            className={s.img_icons_header}
+            src={Frame}
+            alt="Корзина"
+            onClick={toggleBasket}
+        />
+        <CartCounter className={s.headerCartCounter} />
+    </div>
+</div>
                     </div>
                 </div>
             </div>
-
 
             <Basket
                 isOpen={basketOpen}
@@ -102,13 +109,16 @@ const Header = () => {
                         </div>
                         <div className={s.box_logo_img}>
                             <img className={s.box_img} src="app/img/Vector.png" alt="Иконка 1" />
-                            <img
-                                className={s.box_img}
-                                src="app/img/Frame.png"
-                                alt="Иконка 2"
-                                onClick={toggleBasket}
-                                style={{ cursor: 'pointer' }}
-                            />
+                            <div className={s.cartIconWrapper}>
+                                <img
+                                    className={s.box_img}
+                                    src="app/img/Frame.png"
+                                    alt="Корзина"
+                                    onClick={toggleBasket}
+                                />
+                                {/* ИСПОЛЬЗУЕМ КОМПОНЕНТ СЧЕТЧИКА БЕЗ ПРОПСОВ */}
+                                <CartCounter className={s.burgerCartCounter} />
+                            </div>
                         </div>
                     </div>
                 </div>
