@@ -25,15 +25,15 @@ const ProductCard = ({ product, onProductClick }: ProductProps) => {
 
     if (!product || !product.id || !product.title || !product.image) {
         console.error('ProductCard: Некорректные данные продукта');
-        return null; // ВОЗВРАЩАЕМ null ВМЕСТО void
+        return null; 
     }
     
-    return ( // ДОБАВИЛИ return
+    return (
         <div className={s.product_cards} key={product.id}>
             <Link to={`/product/${product.id}`} onClick={handleClick} className={s.product_link}>
                 <div className={s.filter_castle}>
                     <button className={s.filter_castle_button_1}>
-                        <img src='app/img/button_none.png' alt="#" />
+                        <img src='app/img/button_none.png'  />
                     </button>
                     <p className={s.filter_castle_availability_p}>Нет в наличии </p>
 
@@ -46,7 +46,7 @@ const ProductCard = ({ product, onProductClick }: ProductProps) => {
 
                     <div className={s.filter_castle_button_body3}>
                         <button className={s.filter_castle_button_3}>
-                            <img className={s.filter_castle_podarok_3} src='app/img/podarok.png' alt="Подарок" /> Подарок
+                            <img className={s.filter_castle_podarok_3} src='app/img/podarok.png' /> Подарок
                         </button>
                     </div>
                     <img src={product.image} className={s.filter_castle_img} alt={product.title} />
@@ -57,7 +57,7 @@ const ProductCard = ({ product, onProductClick }: ProductProps) => {
                 <p className={s.price_current_price} >Цена: ${product.price}</p>
             </Link>
         </div>
-    ); // ЗАКРЫЛИ return
-}; // ЗАКРЫЛИ ФУНКЦИЮ
+    );
+}; 
 
 export default ProductCard;

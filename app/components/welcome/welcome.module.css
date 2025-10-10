@@ -155,18 +155,18 @@ dd {
 	background-color: #ff4444;
 	color: white;
 	border-radius: 50%;
-	min-width: 18px;
-	height: 18px;
-	font-size: 10px;
+	min-width: 16px;
+	height: 16px;
+	font-size: 8px;
 	font-weight: bold;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	line-height: 1;
-	border: 2px solid white;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	border: 1px solid white;
+	box-shadow: 2 2px 4px rgba(0, 0, 0, 0.2);
 	z-index: 10;
-	padding: 0 4px;
+
 }
 
 .header_ul {
@@ -829,12 +829,17 @@ dd {
 }
 
 .shopping_list {
+	min-height: 300px;
 	overflow-y: auto;
 	scrollbar-width: thin;
 	max-height: 600px;
 
 	height: 50%;
 
+
+}
+
+.price_total_container {
 	border-bottom: solid 1px #7c7c7c;
 }
 
@@ -1102,7 +1107,7 @@ dd {
 	border: solid 1px #EAEAEA;
 }
 
-/* components/CartCounter/CartCounter.module.css */
+
 .cartIconWrapper {
 	position: relative;
 	display: flex;
@@ -1631,11 +1636,11 @@ Open.basket {
 }
 
 
-	.box {
-		display: flex;
-		height: 80px;
-		justify-content: end;
-	}
+.box {
+	display: flex;
+	height: 80px;
+	justify-content: end;
+}
 
 
 @media (max-width: 825px) {
@@ -1744,7 +1749,7 @@ Open.basket {
 
 	}
 
-	
+
 
 	.cart_item_info {
 		display: grid;
@@ -1767,7 +1772,7 @@ Open.basket {
 		font-weight: bold;
 	}
 
-	
+
 	.quantity_btn {
 		width: 30px;
 		height: 30px;
@@ -2204,7 +2209,7 @@ Open.basket {
 
 
 
-	
+
 
 	.quantity_btn {
 		width: 30px;
@@ -2346,11 +2351,16 @@ Open.basket {
 	}
 
 	.headerCartCounter {
-		min-width: 16px;
-		height: 16px;
-		font-size: 9px;
-		top: -4px;
-		right: -4px;
+		min-width: 12px;
+		height: 12px;
+		font-size: 6px;
+
+
+
+
+
+
+
 	}
 
 	.box_logo_img {
@@ -2408,10 +2418,8 @@ Open.basket {
 	}
 
 	.headerCartCounter {
-		min-width: 14px;
-		height: 14px;
-		font-size: 8px;
-		top: -3px;
-		right: -3px;
+		width: 8px;
+		height: 8px;
+
 	}
 }

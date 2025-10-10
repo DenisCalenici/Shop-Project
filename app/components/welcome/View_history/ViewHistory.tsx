@@ -62,9 +62,7 @@ const ViewHistory = () => {
                 </div>
             )}
 
-            <div style={{ color: 'red', fontSize: '14px' }}>
-                Количество товаров в истории: {viewHistory.length}
-            </div>
+            
         </div>
     );
 };

@@ -107,25 +107,25 @@ const Basket: React.FC<BasketProps> = ({ isOpen, onClose }) => {
                         ))
                     )}
 
-                    {cartItems.length > 0 && (
-                        <div className={s.price_total}>
-                            <h3 className={s.price_total_h}>
-                                <p className={s.total_price}>Итого</p>
-                                <div className={s.price}>${getTotalPrice().toFixed(2)}</div>
-                            </h3>
-                            <div className={s.cart_total}>
-                                <button className={s.checkout_btn}>Оформить заказ</button>
-                                <button className={s.cart_return_btn} onClick={onClose}>
-                                    Продолжить покупки
-                                </button>
-                            </div>
-                        </div>
-                    )}
-                </div>
 
+                </div>
+                <div className={s.price_total_container} >  {cartItems.length > 0 && (
+                    <div className={s.price_total}>
+                        <h3 className={s.price_total_h}>
+                            <p className={s.total_price}>Итого</p>
+                            <div className={s.price}>${getTotalPrice().toFixed(2)}</div>
+                        </h3>
+                        <div className={s.cart_total}>
+                            <button className={s.checkout_btn}>Оформить заказ</button>
+                            <button className={s.cart_return_btn} onClick={onClose}>
+                                Продолжить покупки
+                            </button>
+                        </div>
+                    </div>
+                )}</div>
 
                 <div className={s.additional_product}>
-                
+
 
                     <PopularCombos
                         isOpen={isOpen}

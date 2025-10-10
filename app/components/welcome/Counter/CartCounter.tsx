@@ -2,8 +2,10 @@
 import { useCart } from '../Context/CartContext';
 import s from "../welcome.module.css"
 
+
 interface CartCounterProps {
     className?: string;
+ 
 }
 
 const CartCounter: React.FC<CartCounterProps> = ({ className = '' }) => {

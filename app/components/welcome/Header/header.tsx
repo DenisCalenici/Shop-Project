@@ -6,10 +6,9 @@ import Basket from '../Basket/basket'
 import logo_one from '../../../img/Logo_1.svg'
 import Vector from '../../../img/Vector.png'
 import Frame from '../../../img/Frame.png'
-// ИМПОРТИРУЕМ КОМПОНЕНТ СЧЕТЧИКА (убедись что путь правильный)
 import CartCounter from '../Counter/CartCounter'
 
-const Header = () => { // УБРАЛИ HeaderProps и cartCount
+const Header = () => {
     const [nav, setNav] = useState(false);
     const [basketOpen, setBasketOpen] = useState(false);
 
@@ -31,10 +30,10 @@ const Header = () => { // УБРАЛИ HeaderProps и cartCount
             <div className={s.header_container_container}>
                 <div className={s.header_container}>
                     <div className={s.header_logo}>
-                        <img src={logo_one} alt="Логотип" />
+                        <a href="http://localhost:5173/#"><img src={logo_one} alt="Логотип" />  </a>
                     </div>
                     <div className={s.header_ul}>
-                        <a href="#" className={s.header_a}>Главная</a>
+                        <a href="http://localhost:5173/#" className={s.header_a}>Главная</a>
                         <a href="#" className={s.header_a}>Каталог</a>
                         <a href="#" className={s.header_a}>Оптовая продажа</a>
                         <a href="#" className={s.header_a}>О нас</a>
@@ -42,20 +41,19 @@ const Header = () => { // УБРАЛИ HeaderProps и cartCount
                     <div className={s.header_contacts}>
                         <a href="#" className={s.header_contacts_a}>+7 (966) 55 88 499</a>
                         <div className={s.header_contacts_img}>
-    {/* Иконка 1 */}
-    <img className={s.img_icons_header} src={Vector} alt="Иконка 1" />
-    
-    {/* Иконка корзины с оберткой */}
-    <div className={s.cartIconWrapper}>
-        <img
-            className={s.img_icons_header}
-            src={Frame}
-            alt="Корзина"
-            onClick={toggleBasket}
-        />
-        <CartCounter className={s.headerCartCounter} />
-    </div>
-</div>
+
+                            <img className={s.img_icons_header} src={Vector} alt="Иконка 1" />
+
+                            <div className={s.cartIconWrapper}>
+                                <img
+                                    className={s.img_icons_header}
+                                    src={Frame}
+                                    alt="Корзина"
+                                    onClick={toggleBasket}
+                                />
+                                <CartCounter className={s.headerCartCounter} />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -116,8 +114,7 @@ const Header = () => { // УБРАЛИ HeaderProps и cartCount
                                     alt="Корзина"
                                     onClick={toggleBasket}
                                 />
-                                {/* ИСПОЛЬЗУЕМ КОМПОНЕНТ СЧЕТЧИКА БЕЗ ПРОПСОВ */}
-                                <CartCounter className={s.burgerCartCounter} />
+                                <CartCounter  className={s.burgerCartCounter} />
                             </div>
                         </div>
                     </div>

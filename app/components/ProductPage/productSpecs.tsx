@@ -20,9 +20,9 @@ const productSpecs = () => {
     return (
         <div className={s.container_button}>
             <div className={s.description_button} >
-                <button onClick={description} className={s.description_button_1}>Характеристики</button>
-                <button onClick={reviews} className={s.description_button_2}>Описание</button>
-                <button onClick={specifications} className={s.description_button_3}>Отзывы</button>
+                <button onClick={description} className={s.description_button}>Характеристики</button>
+                <button onClick={reviews} className={s.description_button}>Описание</button>
+                <button onClick={specifications} className={s.description_button}>Отзывы</button>
                 {isDescription && (<Description />)}
                 {isReviews && (<Reviews />)}
                 {isSpecifications && (<Specifications />)}

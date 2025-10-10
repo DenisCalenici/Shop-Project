@@ -110,6 +110,9 @@ const ProductPage = () => {
     <Layout title={product.title}>
       <div className={s.product_page_container}>
         {/* ... твой существующий JSX ... */}
+        <div className={s.product_info}>
+          
+            </div>
         <div className={s.product_page}>
           <img className={s.product_image} src={product.image} alt={product.title} />
           <div className={s.image_nev}>
