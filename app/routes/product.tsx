@@ -1,7 +1,7 @@
 
 import type { Route } from "./+types/home";
 import ProductPage from "~/components/ProductPage/ProductPage";
-
+import Layout from "~/components/Layout/Layout";
 export function meta({ }: Route.MetaArgs) {
     return [
         { title: "Product" },
@@ -10,7 +10,9 @@ export function meta({ }: Route.MetaArgs) {
 }
 
 export default function Home() {
-    return <ProductPage />;
+    return <Layout title="Товар">
+        <ProductPage />
+    </Layout>
 }
 
 

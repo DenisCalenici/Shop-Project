@@ -1,7 +1,7 @@
 import s from '../welcome/welcome.module.css'
 import type { IProductCard } from "~/components/Product/ProductCard.type"
 import { Link } from "react-router";
-import { useCart } from '../welcome/Context/CartContext'
+import { useCartActions } from '../Hooks/useCartActions'
 
 interface ProductProps {
     product: IProductCard;
@@ -9,7 +9,7 @@ interface ProductProps {
 }
 
 const ProductCard = ({ product, onProductClick }: ProductProps) => {
-    const { addToCart } = useCart(); 
+    const { handleAddToBasket } = useCartActions(); 
 
     const handleClick = () => {
         if (onProductClick) {
@@ -17,10 +17,11 @@ const ProductCard = ({ product, onProductClick }: ProductProps) => {
         }
     };
 
-    const handleAddToBasket = (e: React.MouseEvent) => {
+
+    const handleAddToBasketClick = (e: React.MouseEvent) => {
         e.stopPropagation(); 
-        e.preventDefault();
-        addToCart(product); 
+        e.preventDefault(); 
+        handleAddToBasket(e, product); 
     };
 
     if (!product || !product.id || !product.title || !product.image) {
@@ -30,20 +31,24 @@ const ProductCard = ({ product, onProductClick }: ProductProps) => {
     
     return (
         <div className={s.product_cards} key={product.id}>
+
             <Link to={`/product/${product.id}`} onClick={handleClick} className={s.product_link}>
                 <div className={s.filter_castle}>
+            
                     <button className={s.filter_castle_button_1}>
-                        <img src='app/img/button_none.png'  />
+                        <img src='app/img/button_none.png' />
                     </button>
                     <p className={s.filter_castle_availability_p}>Нет в наличии </p>
 
+            
                     <button
-                        onClick={handleAddToBasket} 
+                        onClick={handleAddToBasketClick} 
                         className={s.filter_castle_button_2}
                     >
                         SALE
                     </button>
 
+                 
                     <div className={s.filter_castle_button_body3}>
                         <button className={s.filter_castle_button_3}>
                             <img className={s.filter_castle_podarok_3} src='app/img/podarok.png' /> Подарок

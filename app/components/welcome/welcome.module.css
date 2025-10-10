@@ -829,10 +829,10 @@ dd {
 }
 
 .shopping_list {
-	min-height: 300px;
+	min-height: 100px;
 	overflow-y: auto;
 	scrollbar-width: thin;
-	max-height: 600px;
+	max-height: 200px;
 
 	height: 50%;
 
@@ -1241,12 +1241,12 @@ dd {
 	}
 
 	.box_namber {
-		display: grid;
+		display: flex;
 		height: 26px;
 		top: 285px;
 		position: relative;
 		margin: 0px 16px;
-		grid-template-columns: 1fr 1fr;
+		justify-content: space-between;
 	}
 
 	.box_namber_span {
@@ -1982,7 +1982,7 @@ Open.basket {
 	}
 
 	.footer_logo {
-		grid-template-rows: none;
+		grid-template-columns: 1fr 1fr;
 		margin: 0;
 		padding: 0;
 		gap: 0px;

@@ -1,5 +1,5 @@
-// Header.tsx
 import { useState } from 'react'
+import { Link } from "react-router";
 import s from '../welcome.module.css'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import Basket from '../Basket/basket'
@@ -7,6 +7,7 @@ import logo_one from '../../../img/Logo_1.svg'
 import Vector from '../../../img/Vector.png'
 import Frame from '../../../img/Frame.png'
 import CartCounter from '../Counter/CartCounter'
+
 
 const Header = () => {
     const [nav, setNav] = useState(false);
@@ -30,20 +31,20 @@ const Header = () => {
             <div className={s.header_container_container}>
                 <div className={s.header_container}>
                     <div className={s.header_logo}>
-                        <a href="http://localhost:5173/#"><img src={logo_one} alt="Логотип" />  </a>
+
+                        <Link to="/"><img src={logo_one} alt="Логотип" />  </Link>
                     </div>
                     <div className={s.header_ul}>
-                        <a href="http://localhost:5173/#" className={s.header_a}>Главная</a>
-                        <a href="#" className={s.header_a}>Каталог</a>
-                        <a href="#" className={s.header_a}>Оптовая продажа</a>
-                        <a href="#" className={s.header_a}>О нас</a>
+
+                        <Link to="/" className={s.header_a}>Главная</Link>
+                        <Link to="/catalog" className={s.header_a}>Каталог</Link>
+                        <Link to="/wholesale" className={s.header_a}>Оптовая продажа</Link>
+                        <Link to="/about" className={s.header_a}>О нас</Link>
                     </div>
                     <div className={s.header_contacts}>
-                        <a href="#" className={s.header_contacts_a}>+7 (966) 55 88 499</a>
+                        <a href="tel:+79665588499" className={s.header_contacts_a}>+7 (966) 55 88 499</a>
                         <div className={s.header_contacts_img}>
-
                             <img className={s.img_icons_header} src={Vector} alt="Иконка 1" />
-
                             <div className={s.cartIconWrapper}>
                                 <img
                                     className={s.img_icons_header}
@@ -72,17 +73,18 @@ const Header = () => {
                             }
                         >
                             <ul className={s.box_ul_ul}>
+
                                 <li className={s.box_li}>
-                                    <a className={s.box_a} href="#">Главная</a>
+                                    <Link to="/" className={s.box_a}>Главная</Link>
                                 </li>
                                 <li className={s.box_li}>
-                                    <a className={s.box_a} href="#">Каталог</a>
+                                    <Link to="/catalog" className={s.box_a}>Каталог</Link>
                                 </li>
                                 <li className={s.box_li}>
-                                    <a className={s.box_a} href="#">Оптовая продажа</a>
+                                    <Link to="/wholesale" className={s.box_a}>Оптовая продажа</Link>
                                 </li>
                                 <li className={s.box_li}>
-                                    <a className={s.box_a} href="#">О нас</a>
+                                    <Link to="/about" className={s.box_a}>О нас</Link>
                                 </li>
                             </ul>
                             <div className={s.box_namber}>
@@ -94,7 +96,7 @@ const Header = () => {
                                     /> +7 (966) 55 88 499
                                 </span>
                                 <span>
-                                    <a className={s.box_namber_a} href="#">Обратный звонок</a>
+                                    <a className={s.box_namber_a}>Обратный звонок</a>
                                 </span>
                             </div>
                         </div>
@@ -106,15 +108,15 @@ const Header = () => {
                             )}
                         </div>
                         <div className={s.box_logo_img}>
-                            <img className={s.box_img} src="app/img/Vector.png" alt="Иконка 1" />
+                            <img className={s.box_img} src={Vector} alt="Иконка 1" />
                             <div className={s.cartIconWrapper}>
                                 <img
                                     className={s.box_img}
-                                    src="app/img/Frame.png"
+                                    src={Frame}
                                     alt="Корзина"
                                     onClick={toggleBasket}
                                 />
-                                <CartCounter  className={s.burgerCartCounter} />
+                                <CartCounter className={s.burgerCartCounter} />
                             </div>
                         </div>
                     </div>

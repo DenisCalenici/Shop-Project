@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react'
+import { Link } from "react-router"; 
 import s from '../welcome/welcome.module.css'
 import ProductList from './ProductList'
 import type { IProductCard } from './ProductCard.type'
 import arrow from '../../img/Vector_2.png'
+
 const Product = () => {
     const [products, setProducts] = useState<IProductCard[] | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
 
-
     const addToBasket = (product: IProductCard) => {
         console.log('Товар добавлен в корзину:', product);
     };
-
 
     const handleResetFilters = () => {
         console.log('Фильтры сброшены');
@@ -48,13 +48,11 @@ const Product = () => {
         return <div>Загрузка...</div>;
     }
 
-
     if (error) {
         return <div>Ошибка: {error}</div>;
     }
 
     return (
-
         <div className={s.catalog}>
             <div className={s.block}>
                 <button className={s.filter_button_1} onClick={handleResetFilters}>
@@ -90,28 +88,30 @@ const Product = () => {
                         <ProductList addToBasket={addToBasket} products={products || []} />
                     </div>
 
-
+                   
                     <div className={s.paginator_filter}>
-                        <a href='#'>&lt;</a>
-                        <a className={s.paginator_active} href='#'>1</a>
-                        <a href='#'>2</a>
-                        <a href='#'>3</a>
-                        <a href='#'>4</a>
-                        <a href='#'>5</a>
-                        <a href='#'>6</a>
-                        <a href='#'>7</a>
-                        <a href='#'>...</a>
-                        <a href='#'>15</a>
-                        <a href='#'>&gt;</a>
+                        <Link to="#" onClick={(e) => e.preventDefault()}>&lt;</Link>
+                        <Link to="#" onClick={(e) => e.preventDefault()} className={s.paginator_active}>1</Link>
+                        <Link to="#" onClick={(e) => e.preventDefault()}>2</Link>
+                        <Link to="#" onClick={(e) => e.preventDefault()}>3</Link>
+                        <Link to="#" onClick={(e) => e.preventDefault()}>4</Link>
+                        <Link to="#" onClick={(e) => e.preventDefault()}>5</Link>
+                        <Link to="#" onClick={(e) => e.preventDefault()}>6</Link>
+                        <Link to="#" onClick={(e) => e.preventDefault()}>7</Link>
+                        <Link to="#" onClick={(e) => e.preventDefault()}>...</Link>
+                        <Link to="#" onClick={(e) => e.preventDefault()}>15</Link>
+                        <Link to="#" onClick={(e) => e.preventDefault()}>&gt;</Link>
                     </div>
+                    
+           
                     <div className={s.paginator_filter_mobile}>
-                        <a href='#'>&lt;</a>
-                        <a className={s.paginator_active_mobile} href='#'>1</a>
-                        <a href='#'>2</a>
-                        <a href='#'>3</a>
-                        <a href='#'>...</a>
-                        <a href='#'>15</a>
-                        <a href='#'>&gt;</a>
+                        <Link to="#" onClick={(e) => e.preventDefault()}>&lt;</Link>
+                        <Link to="#" onClick={(e) => e.preventDefault()} className={s.paginator_active_mobile}>1</Link>
+                        <Link to="#" onClick={(e) => e.preventDefault()}>2</Link>
+                        <Link to="#" onClick={(e) => e.preventDefault()}>3</Link>
+                        <Link to="#" onClick={(e) => e.preventDefault()}>...</Link>
+                        <Link to="#" onClick={(e) => e.preventDefault()}>15</Link>
+                        <Link to="#" onClick={(e) => e.preventDefault()}>&gt;</Link>
                     </div>
                 </div>
             </div>
