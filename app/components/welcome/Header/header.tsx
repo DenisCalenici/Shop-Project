@@ -52,7 +52,7 @@ const Header = () => {
                                     alt="Корзина"
                                     onClick={toggleBasket}
                                 />
-                                <CartCounter className={s.headerCartCounter} />
+                                <CartCounter onCartClick={toggleBasket} className={s.headerCartCounter} />
                             </div>
                         </div>
                     </div>
@@ -116,7 +116,7 @@ const Header = () => {
                                     alt="Корзина"
                                     onClick={toggleBasket}
                                 />
-                                <CartCounter className={s.burgerCartCounter} />
+                                <CartCounter onCartClick={toggleBasket} className={s.burgerCartCounter} />
                             </div>
                         </div>
                     </div>

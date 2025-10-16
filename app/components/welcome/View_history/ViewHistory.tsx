@@ -37,7 +37,7 @@ const ViewHistory = () => {
             localStorage.setItem('viewHistory', JSON.stringify(newHistory));
         }
     };
-    console.log(viewHistory)
+
 
     return (
         <div className={s.viewing_history}>
@@ -62,7 +62,7 @@ const ViewHistory = () => {
                 </div>
             )}
 
-            
+
         </div>
     );
 };

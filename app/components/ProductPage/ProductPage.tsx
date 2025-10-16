@@ -27,7 +27,7 @@ const ProductPage = () => {
 
 
   const { handleAddToBasket } = useCartActions();
-  console.log('ProductPage: useCartActions работает?', !!handleAddToBasket);
+
   useEffect(() => {
     const loadProduct = async () => {
       if (id) {
@@ -62,17 +62,17 @@ const ProductPage = () => {
 
   if (error) {
     return (
-      <Layout title="Ошибка">
-        <div className={s.errorContainer}>
-          <h2>😕 {error}</h2>
-          <button
-            className={s.retryButton}
-            onClick={() => window.history.back()}
-          >
-            Вернуться назад
-          </button>
-        </div>
-      </Layout>
+
+      <div className={s.errorContainer}>
+        <h2>😕 {error}</h2>
+        <button
+          className={s.retryButton}
+          onClick={() => window.history.back()}
+        >
+          Вернуться назад
+        </button>
+      </div>
+
     );
   }
 
@@ -138,7 +138,7 @@ const ProductPage = () => {
             <div className={s.price}>{product.price}$</div>
             <div className={s.button_add}>
               <button className={s.purchase_button}>Купить</button>
-              {/* ИСПРАВЛЕНИЕ: Теперь используем handleAddToBasket из общего хука */}
+
               <button
                 className={s.like_button}
                 onClick={(e) => handleAddToBasket(e, product)}

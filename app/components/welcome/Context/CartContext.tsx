@@ -36,22 +36,15 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
 
     const actualCartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
+   
     useEffect(() => {
-        const savedCount = localStorage.getItem('headerCartCount');
-        if (savedCount) {
-            setHeaderCartCount(parseInt(savedCount));
-        }
-    }, []);
-
   
-    useEffect(() => {
         setHeaderCartCount(actualCartCount);
     }, [actualCartCount]);
 
     useEffect(() => {
-        localStorage.setItem('headerCartCount', headerCartCount.toString());
         
-    
+        localStorage.setItem('headerCartCount', headerCartCount.toString());
         window.dispatchEvent(new CustomEvent('cartCountUpdated', {
             detail: { count: headerCartCount }
         }));
@@ -71,15 +64,15 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
 
             return [...prevItems, { ...product, quantity: 1 }];
         });
-        
-    
+
+
     };
 
     const removeFromCart = (productId: number) => {
         setCartItems(prevItems => {
             return prevItems.filter(item => item.id !== productId);
         });
-      
+
     };
 
     const updateQuantity = (productId: number, quantity: number) => {
@@ -92,7 +85,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
             return prevItems.map(item =>
                 item.id === productId ? { ...item, quantity } : item
             );
-            
+
         });
     };
 

@@ -147,7 +147,7 @@ dd {
 	transform: scale(1.1);
 }
 
-/* Счетчик для десктопной версии */
+
 .headerCartCounter {
 	position: absolute;
 	top: -5px;
@@ -225,7 +225,6 @@ dd {
 
 .filter_product_cards {
 	display: grid;
-	gap: 30px;
 	grid-template-columns: 1fr 1fr 1fr;
 
 }
@@ -237,23 +236,33 @@ dd {
 
 }
 
+.filter_castle_button_container {
+	display: flex;
+	justify-content: space-between;
+
+}
+
 .filter_castle {
-	width: 100%;
-	height: 320px;
+	background: #e0dddd;
+	width: 250px;
+	height: 250px;
 	position: relative;
 
 }
 
 .filter_castle_2 {
-	width: 100%;
-	height: 320px;
+	background: #e0dddd;
+	width: 250px;
+	height: 250px;
 	position: relative;
 }
 
 .filter_castle_3 {
-	width: 100%;
-	height: 320px;
+	background: #e0dddd;
+	width: 250px;
+	height: 250px;
 	position: relative;
+
 }
 
 .price_card_name_p {
@@ -266,11 +275,15 @@ dd {
 }
 
 .filter_castle_img {
-	box-sizing: border-box;
-	width: 250px;
-	height: 250px;
+	width: 200px;
+	height: 200px;
 	object-fit: contain;
+	transform: translate(13%, 20%);
+	border: none;
+	z-index: 0;
+
 }
+
 
 .filter_castle_buttons {
 	display: flex;
@@ -279,7 +292,7 @@ dd {
 }
 
 .filter_castle_button_1 {
-	z-index: 2;
+	z-index: 1000;
 	padding: 0;
 	width: 20px;
 	height: 22px;
@@ -310,6 +323,7 @@ dd {
 	top: 19px;
 	left: 40px;
 
+		z-index: 1000;
 }
 
 .filter_castle_button_2 {
@@ -321,7 +335,7 @@ dd {
 	height: 30px;
 	border: #ffffff;
 	background-color: #ffffff;
-
+	z-index: 1000;
 	position: absolute;
 	right: 12px;
 	top: 12px;
@@ -336,7 +350,7 @@ dd {
 	padding: 0;
 	border: #ffffff;
 	background-color: #ffffff;
-
+	z-index: 1000;
 	position: absolute;
 	top: 70px;
 }
@@ -497,7 +511,6 @@ dd {
 
 .product_cards {
 	justify-content: center;
-	width: 100%;
 	z-index: 0;
 	padding: 10px;
 
@@ -843,7 +856,6 @@ dd {
 	border-bottom: solid 1px #7c7c7c;
 }
 
-/* Стили для элементов корзины */
 .cart_item {
 
 	padding: 15px;
@@ -1159,7 +1171,6 @@ dd {
 	}
 
 	.filter_product_cards {
-		gap: 10px;
 		grid-template-columns: 1fr 1fr;
 	}
 
@@ -1897,7 +1908,7 @@ Open.basket {
 		width: 636px;
 		position: absolute;
 		min-width: none;
-		height: 1100px;
+		height: 700px;
 		background: white;
 		opacity: 1;
 		z-index: 1000;
