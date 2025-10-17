@@ -323,7 +323,7 @@ dd {
 	top: 19px;
 	left: 40px;
 
-		z-index: 1000;
+	z-index: 1000;
 }
 
 .filter_castle_button_2 {
@@ -508,6 +508,8 @@ dd {
 	border: 1px solid #c4cdd5;
 	float: left;
 }
+
+
 
 .product_cards {
 	justify-content: center;
@@ -1160,6 +1162,21 @@ dd {
 		transform: scale(1.1);
 	}
 }
+
+/*стили оформления заказа*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 1025px) {
 	.filter_block {
@@ -2266,6 +2283,8 @@ Open.basket {
 		color: #2c5aa0;
 		margin-bottom: 15px;
 	}
+
+
 
 	.checkout_btn {
 		width: 216px;
