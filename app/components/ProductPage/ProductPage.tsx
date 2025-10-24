@@ -172,10 +172,22 @@ const ProductPage = () => {
           </div>
         </div>
       </div>
-      <Description />
-      <ViewHistory />
-      <CeoProduct />
-      <UlContainer />
+    
+      <div className={s.container_body}>
+  <Description />
+      </div>
+      <div className={s.container_body}>
+ <ViewHistory />
+      </div>
+      <div className={s.container_body}>
+     <CeoProduct />
+      </div>
+      <div className={s.container_body}>
+  <UlContainer />
+      </div>
+     
+ 
+    
     </div>
   );
 };

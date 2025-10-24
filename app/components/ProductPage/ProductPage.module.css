@@ -251,29 +251,35 @@
     line-height: 26px;
     letter-spacing: 0%;
 }
+
 /* для ошибок*/
 
 .errorContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 60vh;
-  text-align: center;
-  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+    gap: 20px;
+}
+
+.container_body {
+    margin: 0 auto;
+    max-width: 1245px;
 }
 
 .retryButton {
-  padding: 12px 24px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
 .retryButton:hover {
-  transform: translateY(-2px);
+    transform: translateY(-2px);
 }

@@ -8,6 +8,10 @@ input {
     transition: all 0.3s ease;
 }
 
+.body_form_container {
+    display: flex;
+}
+
 .name_form_h1 {
     width: 458px;
     height: 62px;
@@ -23,6 +27,7 @@ input {
 
 
 .name_form_body {
+    margin: 0 auto;
     width: 711px;
     height: 696px;
     opacity: 1;
@@ -42,7 +47,7 @@ input {
 
 .input_container {
     width: 313px;
-    height: 68px;
+    height: 48px;
     opacity: 1;
 
 }
@@ -103,7 +108,7 @@ input {
 .delivery_container {
     margin: 0 auto;
     width: 646px;
-    height: 200px;
+    height: 150px;
     opacity: 1;
     display: inline-block;
 }
@@ -127,7 +132,7 @@ input {
     display: inline-block;
     margin: 0px 0px 0px 8px;
     transform: translateY(-3px);
-  color: #454F5B;
+    color: #454F5B;
 
 }
 
@@ -141,4 +146,154 @@ input {
     border: 1px solid #9E9AA4;
     margin: 0;
     padding: 0;
+}
+
+.radio_paument {
+    width: 210px;
+    height: 24px;
+    opacity: 1;
+    place-items: end;
+    font-family: SF Pro Text;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    display: inline-block;
+    margin: 0px 0px 0px 8px;
+    transform: translateY(-3px);
+    color: #454F5B;
+}
+
+.paument_container {
+    margin: 0 auto;
+    width: 646px;
+    height: 120px;
+    opacity: 1;
+    display: inline-block;
+}
+
+.radio_label_payment {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100px;
+    margin: 0px 0px 0px 35px;
+}
+/* OrderCart.module.css */
+.order_cart {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.order_cart_title {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.order_cart_empty {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+.order_cart_items {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.order_cart_item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    gap: 15px;
+}
+
+.order_cart_item:last-child {
+    border-bottom: none;
+}
+
+.order_cart_item_image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.order_cart_item_details {
+    flex-grow: 1;
+}
+
+.order_cart_item_title {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.order_cart_item_controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.order_cart_item_controls button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.order_cart_item_controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.order_cart_item_controls span {
+    min-width: 30px;
+    text-align: center;
+}
+
+.order_cart_item_info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.order_cart_item_price {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0;
+}
+
+.order_cart_delete_btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.order_cart_delete_btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.order_cart_total {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+    text-align: right;
+}
+
+.order_cart_total h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #333;
 }
