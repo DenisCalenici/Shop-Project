@@ -1,8 +1,8 @@
-// OrderCart.tsx
+
 import React from 'react';
 import { useCart } from '../welcome/Context/CartContext';
 import del from "app/img/basket_del.png";
-import s from './CheckoutForm.module.css'; // создайте отдельный CSS файл
+import s from './CheckoutForm.module.css'; 
 
 const OrderCart: React.FC = () => {
     const { cartItems, removeFromCart, updateQuantity, getTotalPrice } = useCart();
@@ -17,7 +17,7 @@ const OrderCart: React.FC = () => {
 
     return (
         <div className={s.order_cart}>
-            <h2 className={s.order_cart_title}>Ваш заказ</h2>
+           
 
             <div className={s.order_cart_items}>
                 {cartItems.map(item => (

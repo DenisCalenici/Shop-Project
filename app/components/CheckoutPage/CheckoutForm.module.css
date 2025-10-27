@@ -1,8 +1,6 @@
 input {
     font-size: 12px;
-    /* маленький шрифт */
     color: rgba(0, 0, 0, 0.4);
-    /* прозрачный текст */
     border: 0.5px solid rgba(196, 205, 213, 0.5);
 
     transition: all 0.3s ease;
@@ -13,7 +11,7 @@ input {
 }
 
 .name_form_h1 {
-    width: 458px;
+    width: 434px;
     height: 62px;
     margin: 10px 32.5px;
     opacity: 1;
@@ -21,17 +19,32 @@ input {
     font-weight: 600;
     font-size: 44px;
     line-height: 62px;
-    letter-spacing: 0%;
+
 
 }
 
+.order_body {
+    width: 434px;
+    margin: 10px 32.5px;
+    font-family: SF Pro Display;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 34px;
+
+
+}
+
+.name_form_body_container {
+
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+}
 
 .name_form_body {
     margin: 0 auto;
     width: 711px;
     height: 696px;
     opacity: 1;
-    border: 0.5px solid rgba(0, 0, 0, 0.2);
+
 }
 
 .form_container {
@@ -178,6 +191,7 @@ input {
     height: 100px;
     margin: 0px 0px 0px 35px;
 }
+
 /* OrderCart.module.css */
 .order_cart {
     background: #fff;
@@ -201,7 +215,7 @@ input {
 }
 
 .order_cart_items {
-    max-height: 400px;
+    max-height: 150px;
     overflow-y: auto;
 }
 
@@ -211,6 +225,7 @@ input {
     padding: 15px 0;
     border-bottom: 1px solid #eee;
     gap: 15px;
+
 }
 
 .order_cart_item:last-child {
@@ -238,6 +253,13 @@ input {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.order_summary {
+    margin:  82px 30px 0px 30px ;
+    width: 499px;
+    height: 548px;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
 }
 
 .order_cart_item_controls button {
@@ -296,4 +318,119 @@ input {
     margin: 0;
     font-size: 1.3rem;
     color: #333;
+}
+
+.installation_container {
+    display: inline;
+}
+
+.software_container {
+    display: inline;
+}
+
+.installation {}
+
+.software {}
+
+.container_equipment {
+    height: 70px;
+    opacity: 1;
+    margin: 10px 32.5px;
+    border-top: 1px solid #EAEAEA;
+    border-bottom: 1px solid #EAEAEA;
+
+}
+
+.equipment_name {
+    margin: 10px;
+    width: 102px;
+    height: 24px;
+    font-family: SF Pro Text;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    opacity: 1;
+}
+
+.button_installation {
+
+    width: 300px;
+    height: 44px;
+    font-family: SF Pro Display;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    opacity: 1;
+    border: none;
+    background-color: #4295E440;
+    color: #fff;
+
+}
+
+.button_installation_container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    width: 499px;
+    height: 50px;
+
+
+}
+
+.order_span {
+    font-family: SF Pro Display;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0%;
+}
+
+.order_button {
+    width: 71px;
+    height: 26px;
+    opacity: 1;
+    font-family: SF Pro Display;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0%;
+    border: none;
+    background-color: #fff;
+    color: #4295E4;
+
+}
+
+.order_promo_code {
+    margin: 0 auto;
+    width: 451px;
+    height: 26px;
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.order_footer_h3 {
+    width: 451px;
+    height: 20px;
+    opacity: 1;
+    font-family: SF Pro Text;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.order_footer_a {
+    border-bottom: 1px solid;
+    color: #4295E4;
+}
+
+.order_footer {
+    margin: 20px 0 0 0;
 }

@@ -883,11 +883,10 @@ dd {
 
 .cart_return_btn {
 	width: 216px;
-	height: 46px;
-	padding-top: 10px;
-	padding-right: 24px;
-	padding-bottom: 10px;
-	padding-left: 24px;
+		height: 46px;
+		display: flex;
+justify-content: center;
+align-items: center;
 	background: #FFFFFF;
 	border: solid 1px #7c7c7c;
 
@@ -997,11 +996,9 @@ dd {
 
 .checkout_btn {
 	width: 216px;
-	height: 46px;
-	padding-top: 10px;
-	padding-right: 24px;
-	padding-bottom: 10px;
-	padding-left: 24px;
+display: flex;
+justify-content: center;
+align-items: center;
 	background: #4295E4;
 	color: white;
 	border: solid 1px #7c7c7c;
@@ -1490,11 +1487,9 @@ dd {
 
 .cart_return_btn {
 	width: 216px;
-	height: 46px;
-	padding-top: 10px;
-	padding-right: 24px;
-	padding-bottom: 10px;
-	padding-left: 24px;
+	display: flex;
+justify-content: center;
+align-items: center;
 	background: #FFFFFF;
 	border: solid 1px #7c7c7c;
 
@@ -1575,12 +1570,9 @@ dd {
 }
 
 .checkout_btn {
-	width: 216px;
-	height: 46px;
-	padding-top: 10px;
-	padding-right: 24px;
-	padding-bottom: 10px;
-	padding-left: 24px;
+width: 216px;
+	
+
 	background: #4295E4;
 	color: white;
 	border: solid 1px #7c7c7c;
@@ -1754,11 +1746,9 @@ Open.basket {
 
 	.cart_return_btn {
 		width: 216px;
-		height: 46px;
-		padding-top: 10px;
-		padding-right: 24px;
-		padding-bottom: 10px;
-		padding-left: 24px;
+		display: flex;
+justify-content: center;
+align-items: center;
 		background: #FFFFFF;
 		border: solid 1px #7c7c7c;
 
@@ -1841,12 +1831,10 @@ Open.basket {
 	}
 
 	.checkout_btn {
-		width: 216px;
-		height: 46px;
-		padding-top: 10px;
-		padding-right: 24px;
-		padding-bottom: 10px;
-		padding-left: 24px;
+	width: 216px;
+		
+		
+		
 		background: #4295E4;
 		color: white;
 		border: solid 1px #7c7c7c;
@@ -2184,10 +2172,9 @@ Open.basket {
 	.cart_return_btn {
 		width: 216px;
 		height: 46px;
-		padding-top: 10px;
-		padding-right: 24px;
-		padding-bottom: 10px;
-		padding-left: 24px;
+		display: flex;
+justify-content: center;
+align-items: center;
 		background: #FFFFFF;
 		border: solid 1px #7c7c7c;
 
@@ -2273,17 +2260,7 @@ Open.basket {
 
 
 
-	.checkout_btn {
-		width: 216px;
-		height: 46px;
-		padding-top: 10px;
-		padding-right: 24px;
-		padding-bottom: 10px;
-		padding-left: 24px;
-		background: #4295E4;
-		color: white;
-		border: solid 1px #7c7c7c;
-	}
+	
 
 	.basket_p {
 		text-align: center;
