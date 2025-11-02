@@ -45,9 +45,6 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     useEffect(() => {
         
         localStorage.setItem('headerCartCount', headerCartCount.toString());
-        window.dispatchEvent(new CustomEvent('cartCountUpdated', {
-            detail: { count: headerCartCount }
-        }));
     }, [headerCartCount]);
 
     const addToCart = (product: IProductCard) => {

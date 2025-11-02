@@ -844,12 +844,9 @@ dd {
 }
 
 .shopping_list {
-	min-height: 100px;
+
 	overflow-y: auto;
 	scrollbar-width: thin;
-	max-height: 200px;
-
-	height: 50%;
 
 
 }

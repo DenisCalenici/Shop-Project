@@ -1,6 +1,7 @@
 import React from 'react'
 import s from './CheckoutForm.module.css'
-const DeliveryOptions = () => {
+type DeliveryOptionsProps = { onInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void, delivery: string | undefined }
+const DeliveryOptions = ({ onInputChange, delivery }: (DeliveryOptionsProps)) => {
   return (
 
     <div>
@@ -8,18 +9,31 @@ const DeliveryOptions = () => {
 
       <div className={s.delivery_container}>
         <label className={s.radio_label}>
-          <div> <input type="radio" name="option" value="1" className={s.radio_input} />
+          <div> <input type="radio" checked={delivery === '1'} name="delivery" value="1" className={s.radio_input}
+            onChange={onInputChange} />
             <span className={s.radio_custom}>Сдек</span></div>
-          <div> <input type="radio" name="option" value="2" className={s.radio_input} />
+
+
+
+
+
+
+        </label>
+        <label className={s.radio_label}>
+
+          <div> <input type="radio" checked={delivery === '2'} name="delivery" value="2" className={s.radio_input}
+            onChange={onInputChange} />
             <span className={s.radio_custom}>Почта России</span>
           </div>
-          <div><input type="radio" name="option" value="3" className={s.radio_input} />
+
+
+
+
+
+        </label> <label className={s.radio_label}>
+          <div><input type="radio" checked={delivery === '3'} name="delivery" value="3" className={s.radio_input}
+            onChange={onInputChange} />
             <span className={s.radio_custom}> Деловые линии</span></div>
-
-
-
-
-
         </label>
       </div>
     </div>
