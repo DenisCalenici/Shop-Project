@@ -5,7 +5,6 @@
 .product_page_container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0px 20px;
     margin: 0 auto;
     max-width: 1245px;
 }
@@ -135,7 +134,7 @@
     text-align: center;
     border: none;
     color: white;
-
+    margin: 10px;
 }
 
 .price {
@@ -148,21 +147,22 @@
 }
 
 .like_button {
-    width: 116px;
-    height: 24px;
-    opacity: 1;
-    font-family: SF Pro Text;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    border: none;
-    color: #4D4D4D;
+
+
     background: white;
     margin: 0px 20px;
     padding: 0;
-    display: inline;
-
-
+    width: 288px;
+    height: 50px;
+    opacity: 1;
+    margin: 10px;
+    font-family: SF Pro Display;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    border: none;
+    color: #4D4D4D;
 }
 
 .product_complection {
@@ -202,11 +202,11 @@
     height: 24px;
 }
 
-.button_add {}
+
 
 .payment {
     display: flex;
-    width: 597px;
+    min-width: 313px;
     height: 58px;
     padding: 16px;
     gap: 12px;
@@ -222,7 +222,7 @@
 
 .installation_and_delivery {
     display: flex;
-    width: 597px;
+    min-width: 313px;
     height: 58px;
     padding: 16px;
     gap: 12px;
@@ -238,7 +238,7 @@
 
 .guarantee_and_benefit {
     display: flex;
-    width: 597px;
+    min-width: 313px;
     height: 58px;
     padding: 16px;
     gap: 12px;
@@ -282,4 +282,42 @@
 
 .retryButton:hover {
     transform: translateY(-2px);
+}
+
+.button_add {
+    display: flex;
+}
+
+@media (max-width: 1025px) {
+
+    .product_page_container {
+
+        grid-template-columns: 1fr;
+
+
+    }
+
+    .button_add {
+        display: block;
+
+    }
+
+    .title_name {
+        font-family: SF Pro Text;
+        font-weight: 600;
+        font-size: 22px;
+
+        line-height: 32px;
+
+
+    }
+
+    .product_filter {
+        display: block;
+
+    }
+
+    .product_color {
+        padding: 20px 0px;
+    }
 }

@@ -38,7 +38,7 @@ const CheckoutForm = () => {
 
 
     return (
-        <Layout title="title">
+       
             <div className={s.body_form_container} >
 
 
@@ -77,7 +77,7 @@ const CheckoutForm = () => {
                     <OrderSummary onSubmit={handleSubmit} onInputChange={handleChange} />
                 </div>
             </div>
-        </Layout>
+   
     )
 }
 export default CheckoutForm

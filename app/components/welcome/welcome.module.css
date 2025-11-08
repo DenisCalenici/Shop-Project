@@ -19,12 +19,7 @@ button {
 	cursor: pointer;
 }
 
-/* Указываем box sizing
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-} */
+
 /* Убираем внутренние отступы */
 ul[class],
 ol[class] {
@@ -625,6 +620,8 @@ dd {
 }
 
 .footer {
+
+	max-width: 1245px;
 	margin: 0 auto;
 	padding: 20px;
 	display: grid;
@@ -880,10 +877,10 @@ dd {
 
 .cart_return_btn {
 	width: 216px;
-		height: 46px;
-		display: flex;
-justify-content: center;
-align-items: center;
+	height: 46px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background: #FFFFFF;
 	border: solid 1px #7c7c7c;
 
@@ -993,9 +990,9 @@ align-items: center;
 
 .checkout_btn {
 	width: 216px;
-display: flex;
-justify-content: center;
-align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background: #4295E4;
 	color: white;
 	border: solid 1px #7c7c7c;
@@ -1406,6 +1403,7 @@ align-items: center;
 	}
 
 	.footer {
+		
 		grid-template-columns: 200px 1fr;
 	}
 
@@ -1485,8 +1483,8 @@ align-items: center;
 .cart_return_btn {
 	width: 216px;
 	display: flex;
-justify-content: center;
-align-items: center;
+	justify-content: center;
+	align-items: center;
 	background: #FFFFFF;
 	border: solid 1px #7c7c7c;
 
@@ -1567,8 +1565,8 @@ align-items: center;
 }
 
 .checkout_btn {
-width: 216px;
-	
+	width: 216px;
+
 
 	background: #4295E4;
 	color: white;
@@ -1744,8 +1742,8 @@ Open.basket {
 	.cart_return_btn {
 		width: 216px;
 		display: flex;
-justify-content: center;
-align-items: center;
+		justify-content: center;
+		align-items: center;
 		background: #FFFFFF;
 		border: solid 1px #7c7c7c;
 
@@ -1828,10 +1826,10 @@ align-items: center;
 	}
 
 	.checkout_btn {
-	width: 216px;
-		
-		
-		
+		width: 216px;
+
+
+
 		background: #4295E4;
 		color: white;
 		border: solid 1px #7c7c7c;
@@ -2170,8 +2168,8 @@ align-items: center;
 		width: 216px;
 		height: 46px;
 		display: flex;
-justify-content: center;
-align-items: center;
+		justify-content: center;
+		align-items: center;
 		background: #FFFFFF;
 		border: solid 1px #7c7c7c;
 
@@ -2257,7 +2255,7 @@ align-items: center;
 
 
 
-	
+
 
 	.basket_p {
 		text-align: center;

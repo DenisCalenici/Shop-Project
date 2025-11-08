@@ -18,7 +18,7 @@ const OrderSummary = ({ onSubmit, onInputChange }: OrderSummaryProps) => {
             </div>
             <div className={s.container_equipment}>
                 <h1 className={s.equipment_name}>Комплектация</h1>
-                <div>
+                <div className={s.installation_input}>
                     <div className={s.installation_container}>
                         <input 
                             type="checkbox" 
