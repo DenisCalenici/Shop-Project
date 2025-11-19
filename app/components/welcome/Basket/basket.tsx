@@ -4,13 +4,17 @@ import s from '../welcome.module.css';
 import basketDelete from "../../../img/basket_delete.png";
 import { useCart } from '../Context/CartContext';
 import del from "app/img/basket_del.png";
+import PopularCombos from './PopularCombos';
+import type { IProductCard } from '~/components/Product/ProductCard.type';
+
 
 interface BasketProps {
     isOpen: boolean;
     onClose: () => void;
+    addToBasket: (product: IProductCard) => void;
 }
 
-const Basket: React.FC<BasketProps> = ({ isOpen, onClose }) => {
+const Basket: React.FC<BasketProps> = ({ isOpen, onClose, addToBasket }) => {
     const { cartItems, removeFromCart, updateQuantity, getTotalPrice } = useCart();
 
     if (!isOpen) return null;
@@ -68,9 +72,13 @@ const Basket: React.FC<BasketProps> = ({ isOpen, onClose }) => {
                         </div>
                     </div>
                 )}
+
+              
+                <PopularCombos addToBasket={addToBasket} isOpen={isOpen} />
             </div>
         </div>
-    );
+    )
+
 };
 
 export default Basket;
