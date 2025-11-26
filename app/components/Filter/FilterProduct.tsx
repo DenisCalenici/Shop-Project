@@ -9,6 +9,7 @@ interface FilterProductProps {
     onPriceRangeChange: (min: number, max: number) => void;
     onSearchChange: (query: string) => void;
     onClose?: () => void;
+    onReset: () => void;
 }
 
 const FilterProduct: React.FC<FilterProductProps> = ({
@@ -27,37 +28,8 @@ const FilterProduct: React.FC<FilterProductProps> = ({
                     <h3>Фильтры</h3>
                 </div>
             )}
-
-
             <div className={s.filter_section}>
-                <h4>Поиск</h4>
-                <input
-                    type="text"
-                    placeholder="Поиск товаров..."
-                    value={filters.searchQuery}
-                    onChange={(e) => onSearchChange(e.target.value)}
-                    className={s.search_input}
-                />
-            </div>
-
-            <div className={s.filter_section}>
-                <h4>Категории</h4>
-                <div className={s.categories_list}>
-                    {categories.map(category => (
-                        <button
-                            key={category}
-                            onClick={() => onCategoryChange(category)}
-                            className={`category_btn ${filters.category === category ? 'active' : ''
-                                }`}
-                        >
-                            {category === 'all' ? 'Все категории' : category}
-                        </button>
-                    ))}
-                </div>
-            </div>
-
-            <div className={s.filter_section}>
-                <h4>Цена, $</h4>
+                <h4>Цена</h4>
                 <div className={s.price_range}>
                     <div className={s.price_inputs}>
                         <input
@@ -68,7 +40,7 @@ const FilterProduct: React.FC<FilterProductProps> = ({
                             max="1000"
                             className={s.price_input}
                         />
-                        <span>-</span>
+
                         <input
                             type="number"
                             value={filters.priceRange[1]}
@@ -89,6 +61,38 @@ const FilterProduct: React.FC<FilterProductProps> = ({
                 </div>
             </div>
 
+
+
+            <div className={s.filter_section}>
+                <h4>Категории</h4>
+                <div className={s.categories_list}>
+                    {categories.map(category => (
+                        <label key={category} className={s.category_label}>
+                            <input
+                                type="checkbox"
+                                checked={filters.category === category}
+                                onChange={() => onCategoryChange(category)}
+                                className={s.category_checkbox}
+                            />
+                            <span className={`${s.category_text} ${filters.category === category ? s.category_active : ''}`}>
+                                {category === 'all' ? 'Все категории' : category}
+                            </span>
+                        </label>
+                    ))}
+                </div>
+            </div>
+
+
+            <div className={s.filter_section}>
+                <h4>Поиск</h4>
+                <input
+                    type="text"
+                    placeholder="Поиск товаров..."
+                    value={filters.searchQuery}
+                    onChange={(e) => onSearchChange(e.target.value)}
+                    className={s.search_input}
+                />
+            </div>
 
 
         </div>

@@ -261,6 +261,7 @@ dd {
 }
 
 .price_card_name_p {
+	max-width: 278px;
 	font-family: SF Pro Text;
 	font-weight: 400;
 	font-size: 16px;
@@ -499,7 +500,7 @@ dd {
 }
 
 .filter {
-	height: 940px;
+
 	border: 1px solid #c4cdd5;
 	float: left;
 }
@@ -1009,15 +1010,16 @@ dd {
 }
 
 .additional_product_list {
+
 	overflow-x: hidden;
 	scrollbar-width: thin;
-	max-height: 250px;
+	max-height: 320px;
 
 
 }
 
 .additional_product {
-
+	height: 320px;
 	scrollbar-width: thin;
 	margin: 5px;
 }
@@ -1673,6 +1675,7 @@ dd {
 }
 
 .additional_product {
+
 	margin: 15px;
 }
 
@@ -1919,10 +1922,6 @@ Open.basket {
 		color: #666;
 	}
 
-	.additional_product {
-
-		margin: 15px;
-	}
 
 	.basket_title {
 		font-family: SF Pro Display;
@@ -2323,10 +2322,7 @@ Open.basket {
 		color: #666;
 	}
 
-	.additional_product {
 
-		margin: 15px;
-	}
 
 	.basket_title {
 		font-family: SF Pro Display;
@@ -2507,22 +2503,29 @@ Open.basket {
 }
 
 .price_inputs {
+
+	max-width: 240px;
 	width: 200px;
 	display: flex;
+	gap: 5px;
 	align-items: center;
 	margin: 5px auto;
 }
 
 .price_input {
-	width: 80px;
-
+	max-width: 240px;
+	width: 116px;
+	height: 44px;
 	border: 1px solid #ddd;
 	border-radius: 4px;
+	place-items: center;
+	padding: 0;
 }
 
 .price_slider {
-	width: 90%;
-	margin-left: 15px;
+	max-width: 240px;
+	width: 200px;
+	margin: 5px 49.5px;
 }
 
 .filter_actions {
@@ -2569,11 +2572,11 @@ Open.basket {
 
 
 .search_input {
-	width: 80%;
+	width: 250px;
 	height: 40px;
 	line-height: 28px;
-	padding: 0 1rem;
-	padding-left: 2.5rem;
+	margin: 0px 20px;
+	padding: 0;
 	border: 2px solid transparent;
 	border-radius: 8px;
 	outline: none;
@@ -2589,9 +2592,9 @@ Open.basket {
 .search_input:focus,
 .search_input:hover {
 	outline: none;
-	border-color: rgba(234, 76, 137, 0.4);
+
 	background-color: #fff;
-	box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+	box-shadow: 0 0 0 4px rgba(184, 182, 183, 0.1);
 }
 
 .icon {

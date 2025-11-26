@@ -21,10 +21,9 @@ const ProductPage = () => {
   const [product, setProduct] = useState<IProductCard | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  const [isInfoOpen, setIsInfoOpen] = useState(false);
-  const [isInstallDev, setInstallDev] = useState(false);
-  const [isGuarBenefit, setGuarBenefit] = useState(false);
-
+  
+  
+  const [activeAccordion, setActiveAccordion] = useState<string | null>(null);
 
   const { handleAddToBasket } = useCartActions();
 
@@ -62,7 +61,6 @@ const ProductPage = () => {
 
   if (error) {
     return (
-
       <div className={s.errorContainer}>
         <h2>😕 {error}</h2>
         <button
@@ -72,7 +70,6 @@ const ProductPage = () => {
           Вернуться назад
         </button>
       </div>
-
     );
   }
 
@@ -92,17 +89,29 @@ const ProductPage = () => {
     );
   }
 
-  const toggleInfo = () => {
-    setIsInfoOpen(!isInfoOpen);
+  
+  const handleAccordionToggle = (section: string) => {
+    setActiveAccordion(activeAccordion === section ? null : section);
   };
 
-  const installInfo = () => {
-    setInstallDev(!isInstallDev);
-  };
-
-  const guarInfo = () => {
-    setGuarBenefit(!isGuarBenefit);
-  };
+ 
+  const accordionSections = [
+    {
+      id: 'payment',
+      title: 'Оплата',
+      content: 'Оплата при получении товара, Картой онлайн, Google Pay, Акционная оплата картой Visa, Безналичными для юридических лиц, Безналичными для физических лиц, Apple Pay, PrivatPay, Оплата картой в отделении'
+    },
+    {
+      id: 'installation',
+      title: 'Монтаж и доставка',
+      content: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente esse rerum eum quo accusantium soluta animi reprehenderit ratione explicabo odit nihil sint beatae quae nostrum, totam, a ab at! Dignissimos.'
+    },
+    {
+      id: 'guarantee',
+      title: 'Гарантия и выгода',
+      content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sequi labore enim ullam, aut eligendi eum culpa consequatur beatae eos molestiae error quos excepturi quasi sint odit alias, cumque eveniet?'
+    }
+  ];
 
   return (
     <div>
@@ -121,15 +130,27 @@ const ProductPage = () => {
           <div>
             <h2 className={s.rating}>{product.rating.rate}<br />({product.rating.count})Отзывы</h2>
             <h1 className={s.title_name}>{product.title}</h1>
-            <div className={s.installation}> Подходит для установки на:<br />
-              <input type="checkbox" /> <p className={s.wooden_door}>Деревянная дверь</p>
-              <input type="checkbox" /> <p className={s.interior_door}>Межкомнатная дверь</p>
+            <div className={s.installation}> 
+              Подходит для установки на:<br />
+           
+              <label className={s.checkbox_label}>
+                <input type="checkbox" />
+                <span className={s.wooden_door}>Деревянная дверь</span>
+              </label>
+              <label className={s.checkbox_label}>
+                <input type="checkbox" />
+                <span className={s.interior_door}>Межкомнатная дверь</span>
+              </label>
             </div>
             <div className={s.product_filter}>
-              <div className={s.product_complection}> Комплектация <br />
-                <button className={s.product_complection_button}>Smart замок без приложения <img src={offButton} alt="Off" /></button>
+              <div className={s.product_complection}> 
+                Комплектация <br />
+                <button className={s.product_complection_button}>
+                  Smart замок без приложения <img src={offButton} alt="Off" />
+                </button>
               </div>
-              <div className={s.product_color}> Цвет <br />
+              <div className={s.product_color}> 
+                Цвет <br />
                 <button className={s.p_color_1}><img src={IconColor1} alt="Color 1" /></button>
                 <button className={s.p_color_2}></button>
                 <button className={s.p_color_3}></button>
@@ -147,47 +168,46 @@ const ProductPage = () => {
                 <p className={s.like_p}>В избранное</p>
               </button>
             </div>
+
+           
             <div className={s.information}>
-              <button onClick={toggleInfo} className={s.payment}>
-                Оплата {isInfoOpen ? <img src={onButton} alt="On" /> : <img src={offButton} alt="Off" />}
-              </button>
-              {isInfoOpen && (
-                <p>Оплата при получении товара, Картой онлайн, Google Pay, Акционная оплата картой Visa, Безналичными для юридических лиц, Безналичными для физических лиц, Apple Pay, PrivatPay, Оплата картой в отделении</p>
-              )}
-
-              <button onClick={installInfo} className={s.installation_and_delivery}>
-                Монтаж и доставка{isInstallDev ? <img src={onButton} alt="On" /> : <img src={offButton} alt="Off" />}
-              </button>
-              {isInstallDev && (
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente esse rerum eum quo accusantium soluta animi reprehenderit ratione explicabo odit nihil sint beatae quae nostrum, totam, a ab at! Dignissimos.</p>
-              )}
-
-              <button onClick={guarInfo} className={s.guarantee_and_benefit}>
-                Гарантия и выгода {isGuarBenefit ? <img src={onButton} alt="On" /> : <img src={offButton} alt="Off" />}
-              </button>
-              {isGuarBenefit && (
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sequi labore enim ullam, aut eligendi eum culpa consequatur beatae eos molestiae error quos excepturi quasi sint odit alias, cumque eveniet?</p>
-              )}
+              {accordionSections.map(section => (
+                <div key={section.id} className={s.accordion_item}>
+                  <button 
+                    onClick={() => handleAccordionToggle(section.id)}
+                    className={`${s.accordion_button} ${activeAccordion === section.id ? s.accordion_button_active : ''}`}
+                  >
+                    {section.title}
+                    <img 
+                      src={activeAccordion === section.id ? onButton : offButton} 
+                      alt={activeAccordion === section.id ? "On" : "Off"} 
+                    />
+                  </button>
+                  
+                  {activeAccordion === section.id && (
+                    <div className={s.accordion_content}>
+                      <p>{section.content}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
     
       <div className={s.container_body}>
-  <Description />
+        <Description />
       </div>
       <div className={s.container_body}>
- <ViewHistory />
+        <ViewHistory />
       </div>
       <div className={s.container_body}>
-     <CeoProduct />
+        <CeoProduct />
       </div>
       <div className={s.container_body}>
-  <UlContainer />
+        <UlContainer />
       </div>
-     
- 
-    
     </div>
   );
 };
