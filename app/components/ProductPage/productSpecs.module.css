@@ -39,3 +39,14 @@
     margin: 20px auto;
     max-width: 1240px;
 }
+
+.description_button {
+  
+    transition: all 0.3s ease;
+}
+
+.description_button.active {
+
+    
+    border-bottom: 1px solid #0e34f6;
+}

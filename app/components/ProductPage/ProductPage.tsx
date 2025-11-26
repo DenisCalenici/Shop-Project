@@ -11,7 +11,7 @@ import IconColor1 from '../../img/Icon_color(1).png';
 import LikeButton from '../../img/Vector.png';
 import offButton from '../../img/off_button.png';
 import onButton from '../../img/open_button.png';
-import Description from './productSpecs';
+import ProductSpecs from './productSpecs';
 import LoadingOverlay from '../../components/LoadingOverlay/LoadingOverlay';
 import { useCartActions } from '../Hooks/useCartActions';
 
@@ -21,8 +21,8 @@ const ProductPage = () => {
   const [product, setProduct] = useState<IProductCard | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  
-  
+
+
   const [activeAccordion, setActiveAccordion] = useState<string | null>(null);
 
   const { handleAddToBasket } = useCartActions();
@@ -89,12 +89,12 @@ const ProductPage = () => {
     );
   }
 
-  
+
   const handleAccordionToggle = (section: string) => {
     setActiveAccordion(activeAccordion === section ? null : section);
   };
 
- 
+
   const accordionSections = [
     {
       id: 'payment',
@@ -130,9 +130,9 @@ const ProductPage = () => {
           <div>
             <h2 className={s.rating}>{product.rating.rate}<br />({product.rating.count})Отзывы</h2>
             <h1 className={s.title_name}>{product.title}</h1>
-            <div className={s.installation}> 
+            <div className={s.installation}>
               Подходит для установки на:<br />
-           
+
               <label className={s.checkbox_label}>
                 <input type="checkbox" />
                 <span className={s.wooden_door}>Деревянная дверь</span>
@@ -143,13 +143,13 @@ const ProductPage = () => {
               </label>
             </div>
             <div className={s.product_filter}>
-              <div className={s.product_complection}> 
+              <div className={s.product_complection}>
                 Комплектация <br />
                 <button className={s.product_complection_button}>
                   Smart замок без приложения <img src={offButton} alt="Off" />
                 </button>
               </div>
-              <div className={s.product_color}> 
+              <div className={s.product_color}>
                 Цвет <br />
                 <button className={s.p_color_1}><img src={IconColor1} alt="Color 1" /></button>
                 <button className={s.p_color_2}></button>
@@ -169,21 +169,21 @@ const ProductPage = () => {
               </button>
             </div>
 
-           
+
             <div className={s.information}>
               {accordionSections.map(section => (
                 <div key={section.id} className={s.accordion_item}>
-                  <button 
+                  <button
                     onClick={() => handleAccordionToggle(section.id)}
                     className={`${s.accordion_button} ${activeAccordion === section.id ? s.accordion_button_active : ''}`}
                   >
                     {section.title}
-                    <img 
-                      src={activeAccordion === section.id ? onButton : offButton} 
-                      alt={activeAccordion === section.id ? "On" : "Off"} 
+                    <img
+                      src={activeAccordion === section.id ? onButton : offButton}
+                      alt={activeAccordion === section.id ? "On" : "Off"}
                     />
                   </button>
-                  
+
                   {activeAccordion === section.id && (
                     <div className={s.accordion_content}>
                       <p>{section.content}</p>
@@ -195,9 +195,9 @@ const ProductPage = () => {
           </div>
         </div>
       </div>
-    
+
       <div className={s.container_body}>
-        <Description />
+        <ProductSpecs />
       </div>
       <div className={s.container_body}>
         <ViewHistory />

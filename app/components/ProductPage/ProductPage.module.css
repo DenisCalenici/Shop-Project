@@ -252,7 +252,7 @@
     letter-spacing: 0%;
 }
 
-/* для ошибок*/
+
 
 .errorContainer {
     display: flex;
@@ -319,5 +319,132 @@
 
     .product_color {
         padding: 20px 0px;
+    }
+}
+
+.accordion_button {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 16px 20px;
+    background: #ffffff;
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+
+
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    color: #2d3748;
+    line-height: 1.5;
+
+
+    img {
+        width: 20px;
+        height: 20px;
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+        margin-left: 12px;
+    }
+
+
+    .accordion_button:hover {
+        background: #f8f9fa;
+        border-color: #cbd5e0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .accordion_button:focus {
+        outline: none;
+        border-color: #4299e1;
+        box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+    }
+
+    .accordion_button:active {
+        transform: translateY(1px);
+    }
+
+
+    .accordion_button.accordion_button_active {
+        background: #f7fafc;
+        border-color: #4299e1;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+        img {
+            transform: rotate(180deg);
+        }
+    }
+
+
+    .accordion_button:disabled {
+        background: #f7fafc;
+        border-color: #e2e8f0;
+        color: #a0aec0;
+        cursor: not-allowed;
+
+        .accordion_button:hover {
+
+            border-color: #e2e8f0;
+            box-shadow: none;
+        }
+    }
+}
+
+
+[data-theme="dark"] {
+    .accordion_button {
+        background: #2d3748;
+        border-color: #4a5568;
+        color: #e2e8f0;
+
+    }
+
+    .accordion_button:hover {
+        background: #4a5568;
+        border-color: #718096;
+    }
+
+    &.accordion_button_active {
+        background: #4a5568;
+        border-color: #4299e1;
+    }
+
+    &:disabled {
+        background: #2d3748;
+        border-color: #4a5568;
+        color: #718096;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .accordion_button {
+        padding: 14px 16px;
+        font-size: 15px;
+
+        img {
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .accordion_button {
+        padding: 12px 14px;
+        font-size: 14px;
+
+        img {
+            width: 16px;
+            height: 16px;
+            margin-left: 8px;
+        }
     }
 }
